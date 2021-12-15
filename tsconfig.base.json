@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@code-rub/azure-devops": ["packages/azure-devops/src/index.ts"],
+      "@code-rub/core": ["packages/core/src/index.ts"],
+      "@code-rub/jira": ["packages/jira/src/index.ts"],
+      "code-rub": ["packages/code-rub/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

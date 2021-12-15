@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "azure-devops": "packages/azure-devops",
+    "code-rub": "packages/code-rub",
+    "core": "packages/core",
+    "jira": "packages/jira"
+  }
 }

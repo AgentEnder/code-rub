@@ -1,5 +1,9 @@
 {
   "npmScope": "code-rub",
+  "workspaceLayout": {
+    "appsDir": "",
+    "libsDir": "packages"
+  },
   "affected": {
     "defaultBase": "main"
   },
@@ -15,14 +19,10 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "YjJmMGQ5NjItYTYxOS00YWQ0LWE2NzYtYTA1YzBhZGViMWNmfHJlYWQtd3JpdGU="
       }
     }
   },

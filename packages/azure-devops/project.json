@@ -1,0 +1,40 @@
+{
+  "root": "packages/azure-devops",
+  "sourceRoot": "packages/azure-devops/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/azure-devops/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/azure-devops"],
+      "options": {
+        "jestConfig": "packages/azure-devops/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "assets": [
+          {
+            "input": "packages/core",
+            "glob": "**/*.json",
+            "ignore": ["**/tsconfig*.json", "project.json"],
+            "output": "/"
+          }
+        ],
+        "main": "packages/core/src/index.ts",
+        "tsConfig": "packages/core/tsconfig.lib.json",
+        "outputPath": "dist/packages/core"
+      },
+      "outputs": ["dist/packages/core"]
+    }
+  },
+  "tags": []
+}
