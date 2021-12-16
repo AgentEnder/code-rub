@@ -4,7 +4,7 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/node:package",
       "options": {
         "assets": [
           {
@@ -13,10 +13,11 @@
             "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
           }
-        ], 
+        ],
         "main": "packages/core/src/index.ts",
         "tsConfig": "packages/core/tsconfig.lib.json",
-        "outputPath": "dist/packages/core"
+        "outputPath": "dist/packages/core",
+        "packageJson": "packages/core/package.json"
       },
       "outputs": ["dist/packages/core"]
     },

@@ -23,17 +23,17 @@
       "options": {
         "assets": [
           {
-            "input": "packages/core",
+            "input": "packages/code-rub",
             "glob": "**/*.json",
             "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
           }
         ],
-        "main": "packages/core/src/index.ts",
-        "tsConfig": "packages/core/tsconfig.lib.json",
-        "outputPath": "dist/packages/core"
+        "main": "packages/code-rub/src/index.ts",
+        "tsConfig": "packages/code-rub/tsconfig.lib.json",
+        "outputPath": "dist/packages/code-rub"
       },
-      "outputs": ["dist/packages/core"]
+      "outputs": ["dist/packages/code-rub"]
     }
   },
   "tags": []

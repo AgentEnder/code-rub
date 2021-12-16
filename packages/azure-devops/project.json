@@ -29,11 +29,11 @@
             "output": "/"
           }
         ],
-        "main": "packages/core/src/index.ts",
-        "tsConfig": "packages/core/tsconfig.lib.json",
-        "outputPath": "dist/packages/core"
+        "main": "packages/azure-devops/src/index.ts",
+        "tsConfig": "packages/azure-devops/tsconfig.lib.json",
+        "outputPath": "dist/packages/azure-devops"
       },
-      "outputs": ["dist/packages/core"]
+      "outputs": ["dist/packages/azure-devops"]
     }
   },
   "tags": []

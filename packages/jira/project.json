@@ -19,21 +19,23 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/node:package",
       "options": {
         "assets": [
           {
-            "input": "packages/core",
+            "input": "packages/jira",
             "glob": "**/*.json",
             "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
           }
         ],
-        "main": "packages/core/src/index.ts",
-        "tsConfig": "packages/core/tsconfig.lib.json",
-        "outputPath": "dist/packages/core"
+        "main": "packages/jira/src/index.ts",
+        "tsConfig": "packages/jira/tsconfig.lib.json",
+        "outputPath": "dist/packages/jira",
+        "packageJson": "packages/jira/package.json",
+        "generatePackageJson": true
       },
-      "outputs": ["dist/packages/core"]
+      "outputs": ["dist/packages/jira"]
     }
   },
   "tags": []

@@ -1,9 +1,22 @@
 import { Ignore } from 'ignore';
+import { ResolvedConfig } from '.';
 
 import { FileAssignment } from './file-assignment.interface';
-import { Func } from './misc';
 
-export interface CodeRubPlugin {
-  processIgnoredFiles?: Func<[Ignore], Ignore>;
-  processAssignments?: Func<[FileAssignment[]], void>;
+type Awaitable<T> = Promise<T> | T;
+
+export interface CodeRubPlugin<ConfigType> {
+  name: string;
+  processIgnore?: (ig: Ignore, config: ConfigType) => Ignore;
+  processFileQueue?: (files: string[], config: ConfigType) => string[];
+  processAssignments?: (
+    assignments: FileAssignment[],
+    config: ConfigType
+  ) => Awaitable<void | FileAssignment[]>;
+  saveFileMap?: (
+    fileMap: Record<string, boolean>,
+    config: ResolvedConfig
+  ) => void;
+  readFileMap?: (config: ResolvedConfig) => Record<string, boolean>;
+  setup?: (config: ConfigType) => Awaitable<void>;
 }

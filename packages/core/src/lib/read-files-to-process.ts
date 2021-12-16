@@ -2,27 +2,48 @@ import ignore, { Ignore } from 'ignore';
 
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
+import { ResolvedConfig } from '../models';
 import { Func } from '../models/misc';
-import { CodeRubPlugin } from '../models/plugin.interface';
+import { repoRootPath } from './load-config';
 
-export function readFilesToProcess(plugins: CodeRubPlugin[] = []): string[] {
-  const ignore = plugins.reduce(
+export function readFilesToProcess(configuration: ResolvedConfig): {
+  allFiles: string[];
+  filteredFiles: string[];
+} {
+  const ignore = configuration.plugins.reduce(
     (ig, plugin) =>
-      plugin.processIgnoredFiles ? plugin.processIgnoredFiles(ig) : ig,
+      plugin.processIgnore
+        ? plugin.processIgnore(
+            ig,
+            configuration.pluginConfiguration?.[plugin.name]
+          )
+        : ig,
     getDefaultIgnore()
   );
 
   const files: string[] = [];
-  visitNotIgnoredFiles('.', (f) => files.push(f), ignore);
-  return files;
+  visitNotIgnoredFiles(repoRootPath(), '.', (f) => files.push(f), ignore);
+  return {
+    allFiles: files,
+    filteredFiles: configuration.plugins.reduce(
+      (f, plugin) =>
+        plugin.processFileQueue?.(
+          f,
+          configuration.pluginConfiguration?.[plugin.name]
+        ) || f,
+      files
+    ),
+  };
 }
 
 function visitNotIgnoredFiles(
+  basePath: string,
   directory: string,
   visitor: Func<[string], void>,
-  ignore?: Ignore
+  ignore?: Ignore,
 ): void {
-  const entries = readdirSync(directory, { withFileTypes: true });
+  const absolutePath = join(basePath, directory);
+  const entries = readdirSync(absolutePath, { withFileTypes: true });
   for (const entry of entries) {
     const childPath = join(directory, entry.name);
     if (ignore && ignore.test(childPath).ignored) {
@@ -30,7 +51,7 @@ function visitNotIgnoredFiles(
     }
 
     if (entry.isDirectory()) {
-      visitNotIgnoredFiles(childPath, visitor, ignore);
+      visitNotIgnoredFiles(basePath, childPath, visitor, ignore);
     } else {
       visitor(childPath);
     }
