@@ -31,11 +31,11 @@
         ],
         "main": "packages/jira/src/index.ts",
         "tsConfig": "packages/jira/tsconfig.lib.json",
-        "outputPath": "dist/packages/jira",
+        "outputPath": "dist/packages/@code-rub/jira",
         "packageJson": "packages/jira/package.json",
         "generatePackageJson": true
       },
-      "outputs": ["dist/packages/jira"]
+      "outputs": ["{options.outputPath}"]
     }
   },
   "tags": []

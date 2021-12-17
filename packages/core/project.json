@@ -16,10 +16,10 @@
         ],
         "main": "packages/core/src/index.ts",
         "tsConfig": "packages/core/tsconfig.lib.json",
-        "outputPath": "dist/packages/core",
+        "outputPath": "dist/packages/@code-rub/core",
         "packageJson": "packages/core/package.json"
       },
-      "outputs": ["dist/packages/core"]
+      "outputs": ["{options.outputPath}"]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

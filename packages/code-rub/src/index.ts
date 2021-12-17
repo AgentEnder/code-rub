@@ -1,1 +1,5 @@
-export * from './lib/code-rub';
+export * from './lib/commands';
+
+if (require.main === module) {
+  require('./lib/code-rub');
+}

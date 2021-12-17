@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many --target build --all && node ./dist/packages/core/src/lib/main"
+    "start": "nx run-many --target build --all && node ./dist/packages/core/src/lib/main",
+    "start:cli": "nx run-many --target build --all && NODE_PATH=dist/packages node ./dist/packages/code-rub/src/index"
   },
   "private": true,
   "dependencies": {
@@ -14,6 +15,7 @@
     "minimatch": "^3.0.4",
     "ts-node": "^10.4.0",
     "tslib": "^2.0.0",
+    "yargs": "^17.3.0",
     "yargs-parser": "^21.0.0"
   },
   "devDependencies": {
@@ -30,6 +32,7 @@
     "@types/jest": "27.0.2",
     "@types/jira-client": "^7.1.0",
     "@types/node": "^16.11.13",
+    "@types/prettier": "^2.4.2",
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
     "eslint": "8.2.0",
