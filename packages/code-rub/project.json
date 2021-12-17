@@ -19,7 +19,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/node:package",
       "options": {
         "assets": [
           {
@@ -31,7 +31,8 @@
         ],
         "main": "packages/code-rub/src/index.ts",
         "tsConfig": "packages/code-rub/tsconfig.lib.json",
-        "outputPath": "dist/packages/code-rub"
+        "outputPath": "dist/packages/code-rub",
+        "packageJson": "packages/code-rub/package.json"
       },
       "outputs": ["dist/packages/code-rub"]
     }

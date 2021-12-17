@@ -11,6 +11,7 @@ code-rub.config.js,false
 jest.config.js,true
 jest.preset.js,true
 nx.json,false
+package-lock.json,false
 package.json,true
 packages/.gitkeep,false
 packages/azure-devops/.eslintrc.json,false
@@ -71,7 +72,7 @@ packages/jira/tsconfig.json,false
 packages/jira/tsconfig.lib.json,false
 packages/jira/tsconfig.spec.json,false
 tools/generators/.gitkeep,false
-tools/test-plugins/filter-files-by-directory.js,false
+tools/test-plugins/filter-files-by-directory.js,true
 tools/test-plugins/filter-files.plugin.js,true
 tools/test-plugins/log-files-length.plugin.js,true
 tools/test-plugins/log-files-length.plugin.ts,true

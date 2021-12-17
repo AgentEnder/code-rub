@@ -16,13 +16,13 @@ export function configFileName() {
 
 let rootPath: string;
 export function repoRootPath() {
-  return execSync(`git rev-parse --show-toplevel`).toString().trim();
+  return rootPath ??= execSync(`git rev-parse --show-toplevel`).toString().trim();
 }
 
 export async function loadConfig(
   path = configFileName()
 ): Promise<ResolvedConfig> {
-  rootPath ??= repoRootPath();
+  module.paths.push(repoRootPath())
   const config: ProvidedConfig = _require(join(rootPath, path));
   config.storagePath ??= '.code-rub';
   config.plugins ??= [];
