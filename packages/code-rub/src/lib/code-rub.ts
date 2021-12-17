@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import yargs from 'yargs';
 import { generate } from './commands/generate';
 import { init } from './commands/init';

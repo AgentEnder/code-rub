@@ -1,9 +1,13 @@
 {
-    "name": "code-rub",
-    "description": "description",
-    "authors": "author",
-    "version": "1.0.0",
-    "main": "src/index",
-    "dependencies": {}
+  "name": "code-rub",
+  "description": "description",
+  "authors": "author",
+  "version": "1.0.0-alpha.3",
+  "main": "src/index.js",
+  "bin": {
+    "code-rub": "./src/lib/code-rub.js"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
-  
+}

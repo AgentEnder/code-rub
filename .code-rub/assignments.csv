@@ -8,6 +8,7 @@ File, Seen
 .vscode/extensions.json,false
 README.md,false
 code-rub.config.js,false
+code-rub.woml.js,false
 jest.config.js,true
 jest.preset.js,true
 nx.json,false
@@ -19,7 +20,7 @@ packages/azure-devops/README.md,false
 packages/azure-devops/jest.config.js,true
 packages/azure-devops/package.json,false
 packages/azure-devops/project.json,false
-packages/azure-devops/src/index.ts,false
+packages/azure-devops/src/index.ts,true
 packages/azure-devops/src/lib/azure-devops.spec.ts,false
 packages/azure-devops/src/lib/azure-devops.ts,false
 packages/azure-devops/tsconfig.json,false
@@ -33,6 +34,9 @@ packages/code-rub/project.json,false
 packages/code-rub/src/index.ts,false
 packages/code-rub/src/lib/code-rub.spec.ts,false
 packages/code-rub/src/lib/code-rub.ts,true
+packages/code-rub/src/lib/commands/generate.ts,true
+packages/code-rub/src/lib/commands/index.ts,false
+packages/code-rub/src/lib/commands/init.ts,false
 packages/code-rub/tsconfig.json,false
 packages/code-rub/tsconfig.lib.json,false
 packages/code-rub/tsconfig.spec.json,false
@@ -77,7 +81,7 @@ tools/test-plugins/filter-files.plugin.js,true
 tools/test-plugins/log-files-length.plugin.js,true
 tools/test-plugins/log-files-length.plugin.ts,true
 tools/test-plugins/log-files.plugin.ts,true
-tools/tsconfig.tools.json,false
+tools/tsconfig.tools.json,true
 tsconfig.base.json,false
 workspace.json,false
 yarn.lock,false
