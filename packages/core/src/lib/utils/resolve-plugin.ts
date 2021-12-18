@@ -1,6 +1,7 @@
 import { basename } from 'path';
+
 import { CodeRubPlugin } from '../../models';
-import { extendedRequire } from './require';
+import { extendedRequire, resolve } from './require';
 
 export function resolvePlugin<T = unknown>(
   p: CodeRubPlugin<T> | string
@@ -8,7 +9,7 @@ export function resolvePlugin<T = unknown>(
   const plugin = typeof p === 'string' ? extendedRequire(p) : p;
   if (!plugin.name) {
     plugin.name =
-      typeof p === 'string' ? basename(require.resolve(p)) : 'UnknownPlugin';
+      typeof p === 'string' ? basename(resolve(p)) : 'UnknownPlugin';
   }
   return plugin;
 }

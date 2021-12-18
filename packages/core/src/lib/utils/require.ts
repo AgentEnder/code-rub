@@ -1,10 +1,12 @@
 import { register } from 'ts-node';
 import { repoRootPath } from './path';
 
-module.paths.push(repoRootPath());
+export function resolve(path: string) {
+  return require.resolve(path, { paths: [repoRootPath()] });
+}
 
 export function extendedRequire(path: string) {
-  const p = require.resolve(path);
+  const p = resolve(path);
   if (p.endsWith('.ts')) {
     registerTsNode();
   }

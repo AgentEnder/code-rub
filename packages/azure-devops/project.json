@@ -36,9 +36,9 @@
         ],
         "main": "packages/azure-devops/src/index.ts",
         "tsConfig": "packages/azure-devops/tsconfig.lib.json",
-        "outputPath": "dist/packages/azure-devops"
+        "outputPath": "dist/packages/@code-rub/azure-devops"
       },
-      "outputs": ["dist/packages/azure-devops"]
+      "outputs": ["{options.outputPath}"]
     }
   },
   "tags": []

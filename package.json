@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "dotenv": "^10.0.0",
     "enquirer": "^2.3.6",
     "fs-extra": "^10.0.0",
     "ignore": "^5.1.9",
@@ -24,8 +25,6 @@
     "yargs-parser": "^21.0.0"
   },
   "devDependencies": {
-    "@code-rub/core": "^1.0.2",
-    "@code-rub/jira": "^1.0.2",
     "@nrwl/cli": "13.3.6",
     "@nrwl/eslint-plugin-nx": "13.3.6",
     "@nrwl/jest": "13.3.6",
@@ -42,7 +41,6 @@
     "@types/prettier": "^2.4.2",
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
-    "code-rub": "^1.0.2",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.1.0",
     "jest": "27.2.3",

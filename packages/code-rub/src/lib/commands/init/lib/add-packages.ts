@@ -1,10 +1,22 @@
 import { repoRootPath } from '@code-rub/core';
 import { exec } from 'child_process';
 import { getPackageManagerCommand } from './package-manager';
+import { prompt } from 'enquirer';
 import ora from 'ora';
 
 export async function installDevDependencies(packages: string[]) {
-  console.log('Adding required packages to package.json');
+  console.log(
+    [
+      'This will install the following packages: ',
+      ...packages.map((x) => '\t- ' + x),
+    ].join('\n')
+  );
+  const { c } = await prompt<{ c: boolean }>({
+    name: 'c',
+    type: 'confirm',
+    message: 'Install Packages?',
+  });
+  if (!c) return;
   const cmd = `${getPackageManagerCommand().addDev} ${packages.join(' ')}`;
   const spinner = ora(cmd).start();
   return new Promise<void>((res, rej) =>

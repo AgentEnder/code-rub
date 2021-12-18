@@ -1,94 +1,30 @@
+# code-rub
 
+This repository implements a base layer, CLI, and a few plugins to automate the process described here: https://hassanhabib.com/2020/02/09/code-rub/.
 
-# CodeRub
+The core of code-rub is agnostic to ticketing system, project philosophy, and technology. On its own, it will do nothing except keep track of which files have been assigned for a rub, but it doesn't know how to actually create tickets and assign them. It doesn't even log them to the console by default.
 
-This project was generated using [Nx](https://nx.dev).
+## Quick Start
+Currently, a jira plugin is provided. If this suits your use case, run `npx code-rub init --preset jira`, and then fill in the placeholder values created in `code-rub.config.js`.
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+If this doesn't suit your use case, run `npx code-rub init` to generate a blank configuration. There are examples of local plugins in this repo's tool folder, and the `code-rub.config.js` file here demonstrates how to point to them. They can be either typescript or javascript. There are future plans to add azure-devops and github issues based support, but they are not yet implemented. PRs adding them are welcome 😀
 
-🔎 **Smart, Extensible Build Framework**
+## Plugins
 
-## Adding capabilities to your workspace
+This is where the plugins come in. A code-rub plugin can change almost everything about the flow of `npx code-rub`. They can provide:
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+- A setup function: `setup`
+- An initial configuration, used in `npx code-rub init --preset`: `initialConfiguration`
+- A method to process assignments, after they are generated: `processAssignments`
+- A method to process the file queue, useful for filtering out file extensions or paths: `processFileQueue`
+- A method to process the `Ignore` object used when generating the repository file map: `processIgnore`
+  - This is ran before `code-rub` saves the file map, so it affects all configuration files. This should only be specified in the repositories base configuration (or sole configuration).
+- A method to read and write the file map: `readFileMap` and `saveFileMap` respectively.
+  - Only one plugin may specify these methods.
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+Plugins are specified by two pieces of configuration, the `plugins` array and the `pluginConfiguration` object. Plugin's are loaded based on the `plugins` array, and the capabilities they provide are configured through their entry in `pluginConfiguration`. 
 
-Below are our core plugins:
+Plugins are loaded, and executed based on their order in the `plugins` array. This is especially important for functions like `processFileQueue` which chains the results during execution. 
+> As an example, imagine you have plugin1 which removes typescript files but plugin2 expects them to be present. If you use `plugins: [plugin1, plugin2]`, plugin2 would not see any of the typescript files. If you use `plugins: [plugin2, plugin1]`, plugin2 would see them since they are not removed yet.
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
-
-## Generate an application
-
-Run `nx g @nrwl/react:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@code-rub/mylib`.
-
-## Development server
-
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+For an example plugin implementation, check the `jira` package in this repository.

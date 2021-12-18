@@ -293,28 +293,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@code-rub/core@1.0.2", "@code-rub/core@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@code-rub/core/-/core-1.0.2.tgz#646523a9b623633cb5b1e6aecbbe35e968575671"
-  integrity sha512-jK7aZIyR68hOHzmDeGvO1h9h5uFkCebjs9sBYAha2BQoKZIeBKQ1iUWKWGCESTeCTYaxvn1YghJDDgDlw41yDw==
-  dependencies:
-    fs-extra "^10.0.0"
-    ignore "^5.1.9"
-    ts-node "^10.4.0"
-
-"@code-rub/jira@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@code-rub/jira/-/jira-1.0.2.tgz#39820d2c98f8494de62b9ce496880db8d8402fe6"
-  integrity sha512-ZK3vVWxu32QeuosB3lCYYyebY8KviYU7Qno7SgugoTMXVU8QlZmTSIveUFMBVZGulFYTxJ6gink1wrW213XzAg==
-  dependencies:
-    "@code-rub/core" "1.0.2"
-    enquirer "^2.3.6"
-    fs-extra "^10.0.0"
-    ignore "^5.1.9"
-    jira-client "^8.0.0"
-    ts-node "^10.4.0"
-    yargs-parser "^21.0.0"
-
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-consumer/-/source-map-consumer-0.8.0.tgz#33bf4b7b39c178821606f669bbc447a6a629786b"
@@ -1907,20 +1885,6 @@ code-excerpt@^3.0.0:
   dependencies:
     convert-to-spaces "^1.0.1"
 
-code-rub@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/code-rub/-/code-rub-1.0.2.tgz#9ddc43d358b0067495dc88c820ddc118bbadfeec"
-  integrity sha512-4cIFVwpP/vx7psEyac94uv3zV6aPGD0yF9kRQ+k3im0S18O/7m8h0JolXYnnp3RBVeanpooYGOoNXPu3dZ2bMA==
-  dependencies:
-    "@code-rub/core" "1.0.2"
-    enquirer "^2.3.6"
-    fs-extra "^10.0.0"
-    ignore "^5.1.9"
-    ora "5.3.0"
-    ts-node "^10.4.0"
-    tslib "^2.0.0"
-    yargs "^17.3.0"
-
 collect-v8-coverage@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/collect-v8-coverage/-/collect-v8-coverage-1.0.1.tgz#cc2c8e94fc18bbdffe64d6534570c8a673b27f59"
@@ -2281,7 +2245,7 @@ dompurify@^2.2.6:
   resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.3.4.tgz#1cf5cf0105ccb4debdf6db162525bd41e6ddacc6"
   integrity sha512-6BVcgOAVFXjI0JTjEvZy901Rghm+7fDQOrNIcxB4+gdhj6Kwp6T9VBhBY/AbagKHJocRkDYGd6wvI+p4/10xtQ==
 
-dotenv@~10.0.0:
+dotenv@^10.0.0, dotenv@~10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
   integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
