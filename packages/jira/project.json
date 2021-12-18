@@ -27,6 +27,11 @@
             "glob": "**/*.json",
             "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
+          },
+          {
+            "input": "packages/code-rub",
+            "glob": "**/*.md",
+            "output": "/"
           }
         ],
         "main": "packages/jira/src/index.ts",

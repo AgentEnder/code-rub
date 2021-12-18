@@ -12,6 +12,11 @@
             "glob": "**/*.json",
             "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
+          },
+          {
+            "input": "packages/core",
+            "glob": "**/*.md",
+            "output": "/"
           }
         ],
         "main": "packages/core/src/index.ts",

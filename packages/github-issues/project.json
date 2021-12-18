@@ -1,0 +1,34 @@
+{
+  "root": "packages/github-issues",
+  "sourceRoot": "packages/github-issues/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/github-issues/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/github-issues"],
+      "options": {
+        "jestConfig": "packages/github-issues/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/github-issues",
+        "tsConfig": "packages/github-issues/tsconfig.lib.json",
+        "packageJson": "packages/github-issues/package.json",
+        "main": "packages/github-issues/src/index.ts",
+        "assets": ["packages/github-issues/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

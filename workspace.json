@@ -4,6 +4,7 @@
     "azure-devops": "packages/azure-devops",
     "code-rub": "packages/code-rub",
     "core": "packages/core",
+    "github-issues": "packages/github-issues",
     "jira": "packages/jira"
   }
 }
