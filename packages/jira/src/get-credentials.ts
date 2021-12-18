@@ -1,5 +1,5 @@
 import { execSync } from 'child_process';
-import * as parser from 'yargs-parser';
+import parser from 'yargs-parser';
 import { prompt } from 'enquirer';
 
 export async function getCredentials(): Promise<{

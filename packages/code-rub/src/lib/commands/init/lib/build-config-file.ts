@@ -1,21 +1,24 @@
-import { ProvidedConfig, repoRootPath } from '@code-rub/core';
+import {
+  CodeRubPlugin,
+  deepClone,
+  ProvidedConfig,
+  repoRootPath,
+  resolvePlugin,
+} from '@code-rub/core';
 import { existsSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { prompt } from 'enquirer';
 import type * as Prettier from 'prettier';
 
-export interface InitArgs {
-  configFile: string;
-}
-
+type ConfigFileDescription = {
+  [key in keyof ProvidedConfig]: ConfigPropertyDescription;
+};
 type ConfigPropertyDescription = {
-  [key in keyof ProvidedConfig]: {
-    description: string;
-    defaultValue: string;
-  };
+  description?: string;
+  defaultValue: string;
 };
 
-const DEFAULT_CONFIG: ConfigPropertyDescription = {
+const DEFAULT_CONFIG: ConfigFileDescription = {
   plugins: {
     defaultValue: '[]',
     description:
@@ -39,7 +42,7 @@ const DEFAULT_CONFIG: ConfigPropertyDescription = {
   },
 };
 
-export async function init({ configFile }: InitArgs) {
+export async function buildConfigFile(configFile: string, preset?: string) {
   const path = join(repoRootPath(), configFile);
   if (existsSync(configFile)) {
     const { response } = await prompt<{ response: boolean }>({
@@ -51,8 +54,16 @@ export async function init({ configFile }: InitArgs) {
       return Promise.resolve();
     }
   }
+
+  let c = DEFAULT_CONFIG;
+
+  if (preset) {
+    const plugin = resolvePlugin(preset);
+    c = await updateDefaultConfiguration(plugin);
+  }
+
   const prettier = await loadPrettier();
-  let contents = buildConfigFileContents();
+  let contents = buildConfigFileContents(c);
 
   if (prettier) {
     const config: Prettier.Options =
@@ -60,7 +71,6 @@ export async function init({ configFile }: InitArgs) {
     config.filepath = path;
     contents = prettier.format(contents, config);
   }
-
   writeFileSync(path, contents);
 }
 
@@ -68,21 +78,27 @@ async function loadPrettier(): Promise<typeof Prettier | null> {
   return import('prettier').catch(() => null);
 }
 
-function buildConfigFileContents() {
+function buildConfigFileContents(c: ConfigFileDescription) {
   return [
     'module.exports = {',
-    Object.entries(DEFAULT_CONFIG)
+    Object.entries(c)
       .map(([key, meta]) =>
-        [
-          '  /**',
-          meta.description
-            .split('\n')
-            .map((line) => '   * ' + line)
-            .join('\n'),
-          '   */',
-          `\t${key}: ${meta.defaultValue},`,
-          '',
-        ].join('\n')
+        ([] as string[])
+          .concat(
+            meta.description
+              ? [
+                  '  /**',
+                  meta.description
+                    .split('\n')
+                    .map((line) => '   * ' + line)
+                    .join('\n'),
+                  '   */',
+                ]
+              : [],
+            `\t${key}: ${meta.defaultValue},`,
+            ''
+          )
+          .join('\n')
       )
       .join('\n')
       .trimEnd(),
@@ -90,4 +106,29 @@ function buildConfigFileContents() {
   ]
     .join('\n')
     .trimEnd();
+}
+
+async function updateDefaultConfiguration({
+  initialConfiguration,
+}: CodeRubPlugin<unknown>): Promise<ConfigFileDescription> {
+  if (!initialConfiguration) {
+    return DEFAULT_CONFIG;
+  }
+  if (typeof initialConfiguration === 'function') {
+    initialConfiguration = await initialConfiguration();
+  } else {
+    initialConfiguration = await initialConfiguration;
+  }
+
+  const c = deepClone<typeof DEFAULT_CONFIG>(DEFAULT_CONFIG);
+  Object.entries(initialConfiguration).forEach((([key, value]: [
+    keyof ProvidedConfig,
+    unknown
+  ]) => {
+    const res = {
+      defaultValue: JSON.stringify(value),
+    } as ConfigPropertyDescription;
+    c[key] = res;
+  }) as any);
+  return c;
 }

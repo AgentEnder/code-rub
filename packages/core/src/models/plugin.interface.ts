@@ -1,5 +1,5 @@
 import { Ignore } from 'ignore';
-import { ResolvedConfig } from '.';
+import { ProvidedConfig, ResolvedConfig } from '.';
 
 import { FileAssignment } from './file-assignment.interface';
 
@@ -19,4 +19,7 @@ export interface CodeRubPlugin<ConfigType> {
   ) => void;
   readFileMap?: (config: ResolvedConfig) => Record<string, boolean>;
   setup?: (config: ConfigType) => Awaitable<void>;
+  initialConfiguration?:
+    | Awaitable<ProvidedConfig>
+    | (() => Awaitable<ProvidedConfig>);
 }

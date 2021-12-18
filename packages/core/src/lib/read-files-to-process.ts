@@ -4,7 +4,7 @@ import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { ResolvedConfig } from '../models';
 import { Func } from '../models/misc';
-import { repoRootPath } from './load-config';
+import { repoRootPath } from './utils';
 
 export function readFilesToProcess(configuration: ResolvedConfig): {
   allFiles: string[];
@@ -40,7 +40,7 @@ function visitNotIgnoredFiles(
   basePath: string,
   directory: string,
   visitor: Func<[string], void>,
-  ignore?: Ignore,
+  ignore?: Ignore
 ): void {
   const absolutePath = join(basePath, directory);
   const entries = readdirSync(absolutePath, { withFileTypes: true });

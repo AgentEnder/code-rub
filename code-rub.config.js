@@ -1,6 +1,6 @@
 const config = {
   plugins: [
-    // 'tools/test-plugins/filter-files.plugin.js',
+    'tools/test-plugins/filter-files.plugin.js',
     'tools/test-plugins/log-files-length.plugin.js',
     // 'dist/packages/jira/src/index.js',
   ],

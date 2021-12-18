@@ -1,4 +1,4 @@
-import JiraApi = require('jira-client');
+import type JiraApi from 'jira-client';
 
 export async function findJiraUser(jira: JiraApi, uid: string) {
   const searchResults = await jira.searchUsers({
