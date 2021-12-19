@@ -1,7 +1,7 @@
 ---
-id: "InitArgs"
-title: "Interface: InitArgs"
-sidebar_label: "InitArgs"
+id: 'InitArgs'
+title: 'Interface: InitArgs'
+sidebar_label: 'InitArgs'
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -16,9 +16,9 @@ What should the new configuration file be named?
 
 #### Defined in
 
-[lib/commands/init/init.ts:14](https://github.com/agentender/code-rub/blob/944960b/packages/code-rub/src/lib/commands/init/init.ts#L14)
+[lib/commands/init/init.ts:14](https://github.com/agentender/code-rub/blob/f237c89/packages/code-rub/src/lib/commands/init/init.ts#L14)
 
-___
+---
 
 ### preset
 
@@ -28,16 +28,16 @@ Should a plugin be used to generate default settings?
 
 #### Defined in
 
-[lib/commands/init/init.ts:19](https://github.com/agentender/code-rub/blob/944960b/packages/code-rub/src/lib/commands/init/init.ts#L19)
+[lib/commands/init/init.ts:19](https://github.com/agentender/code-rub/blob/f237c89/packages/code-rub/src/lib/commands/init/init.ts#L19)
 
-___
+---
 
 ### skipInstall
 
 • **skipInstall**: `boolean`
 
-Skips installing packages as part of the process. If a package is used for the preset and not installed, passing this *will* cause an error as the package will not be able to be resolved.
+Skips installing packages as part of the process. If a package is used for the preset and not installed, passing this _will_ cause an error as the package will not be able to be resolved.
 
 #### Defined in
 
-[lib/commands/init/init.ts:24](https://github.com/agentender/code-rub/blob/944960b/packages/code-rub/src/lib/commands/init/init.ts#L24)
+[lib/commands/init/init.ts:24](https://github.com/agentender/code-rub/blob/f237c89/packages/code-rub/src/lib/commands/init/init.ts#L24)

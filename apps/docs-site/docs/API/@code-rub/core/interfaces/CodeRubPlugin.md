@@ -1,7 +1,7 @@
 ---
-id: "CodeRubPlugin"
-title: "Interface: CodeRubPlugin<ConfigType>"
-sidebar_label: "CodeRubPlugin"
+id: 'CodeRubPlugin'
+title: 'Interface: CodeRubPlugin<ConfigType>'
+sidebar_label: 'CodeRubPlugin'
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -10,8 +10,8 @@ custom_edit_url: null
 
 ## Type parameters
 
-| Name | Description |
-| :------ | :------ |
+| Name         | Description                                                                     |
+| :----------- | :------------------------------------------------------------------------------ |
 | `ConfigType` | A type parameter, representing the typing for the plugin's configuration object |
 
 ## Properties
@@ -24,9 +24,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/plugin.interface.ts:71](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L71)
+[models/plugin.interface.ts:71](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L71)
 
-___
+---
 
 ### name
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:16](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L16)
+[models/plugin.interface.ts:16](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L16)
 
 ## Methods
 
@@ -48,10 +48,10 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name          | Type                                 | Description                                                                     |
+| :------------ | :----------------------------------- | :------------------------------------------------------------------------------ |
 | `assignments` | [`FileAssignment`](FileAssignment)[] | This is the current list of assignments. They can be modified or used directly. |
-| `config` | `ConfigType` | This is the config for the currently executing plugin |
+| `config`      | `ConfigType`                         | This is the config for the currently executing plugin                           |
 
 #### Returns
 
@@ -61,9 +61,9 @@ Either a list of file assignments to use in further plugin execution, or nothing
 
 #### Defined in
 
-[models/plugin.interface.ts:40](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L40)
+[models/plugin.interface.ts:40](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L40)
 
-___
+---
 
 ### processFileQueue
 
@@ -73,10 +73,10 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `files` | `string`[] | This is the lst of files being for your plugin. It should be used to generate the next list or directly modified. |
-| `config` | `ConfigType` | This is the config for the currently executing plugin |
+| Name     | Type         | Description                                                                                                       |
+| :------- | :----------- | :---------------------------------------------------------------------------------------------------------------- |
+| `files`  | `string`[]   | This is the lst of files being for your plugin. It should be used to generate the next list or directly modified. |
+| `config` | `ConfigType` | This is the config for the currently executing plugin                                                             |
 
 #### Returns
 
@@ -86,9 +86,9 @@ A list of file paths that will be used in the next plugin or to generate assignm
 
 #### Defined in
 
-[models/plugin.interface.ts:32](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L32)
+[models/plugin.interface.ts:32](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L32)
 
-___
+---
 
 ### processIgnore
 
@@ -98,10 +98,10 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `ig` | `Ignore` | This represents the current `Ignore` instance, it should be used during implementation to update the files being ignored. |
-| `config` | `ConfigType` | This is the config for the currently executing plugin |
+| Name     | Type         | Description                                                                                                               |
+| :------- | :----------- | :------------------------------------------------------------------------------------------------------------------------ |
+| `ig`     | `Ignore`     | This represents the current `Ignore` instance, it should be used during implementation to update the files being ignored. |
+| `config` | `ConfigType` | This is the config for the currently executing plugin                                                                     |
 
 #### Returns
 
@@ -111,9 +111,9 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:24](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L24)
+[models/plugin.interface.ts:24](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L24)
 
-___
+---
 
 ### readFileMap
 
@@ -123,8 +123,8 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type                               | Description                                                                                                   |
+| :------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------------ |
 | `config` | [`ResolvedConfig`](ResolvedConfig) | This is the config for the instance of @code-rub core that is executing. See [ResolvedConfig](ResolvedConfig) |
 
 #### Returns
@@ -135,9 +135,9 @@ A Map between file path and a boolean representing if the file has been seen. Th
 
 #### Defined in
 
-[models/plugin.interface.ts:60](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L60)
+[models/plugin.interface.ts:60](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L60)
 
-___
+---
 
 ### saveFileMap
 
@@ -147,10 +147,10 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `fileMap` | `Record`<`string`, `boolean`\> | This is a Map between file path and a boolean representing if the file has been seen. This should be saved inside this function. |
-| `config` | [`ResolvedConfig`](ResolvedConfig) | This is the config for the instance of @code-rub core that is executing. See [ResolvedConfig](ResolvedConfig) |
+| Name      | Type                               | Description                                                                                                                      |
+| :-------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| `fileMap` | `Record`<`string`, `boolean`\>     | This is a Map between file path and a boolean representing if the file has been seen. This should be saved inside this function. |
+| `config`  | [`ResolvedConfig`](ResolvedConfig) | This is the config for the instance of @code-rub core that is executing. See [ResolvedConfig](ResolvedConfig)                    |
 
 #### Returns
 
@@ -158,9 +158,9 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:50](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L50)
+[models/plugin.interface.ts:50](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L50)
 
-___
+---
 
 ### setup
 
@@ -170,8 +170,8 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type         | Description                                                                                                   |
+| :------- | :----------- | :------------------------------------------------------------------------------------------------------------ |
 | `config` | `ConfigType` | This is the config for the instance of @code-rub core that is executing. See [ResolvedConfig](ResolvedConfig) |
 
 #### Returns
@@ -180,4 +180,4 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:66](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L66)
+[models/plugin.interface.ts:66](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L66)

@@ -1,7 +1,7 @@
 ---
-id: "models.JiraPluginConfig"
-title: "Interface: JiraPluginConfig"
-sidebar_label: "JiraPluginConfig"
+id: 'models.JiraPluginConfig'
+title: 'Interface: JiraPluginConfig'
+sidebar_label: 'JiraPluginConfig'
 custom_edit_url: null
 ---
 
@@ -15,9 +15,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.ts:5](https://github.com/agentender/code-rub/blob/944960b/packages/jira/src/models/config.ts#L5)
+[models/config.ts:5](https://github.com/agentender/code-rub/blob/f237c89/packages/jira/src/models/config.ts#L5)
 
-___
+---
 
 ### host
 
@@ -25,9 +25,9 @@ ___
 
 #### Defined in
 
-[models/config.ts:7](https://github.com/agentender/code-rub/blob/944960b/packages/jira/src/models/config.ts#L7)
+[models/config.ts:7](https://github.com/agentender/code-rub/blob/f237c89/packages/jira/src/models/config.ts#L7)
 
-___
+---
 
 ### issueType
 
@@ -35,9 +35,9 @@ ___
 
 #### Defined in
 
-[models/config.ts:6](https://github.com/agentender/code-rub/blob/944960b/packages/jira/src/models/config.ts#L6)
+[models/config.ts:6](https://github.com/agentender/code-rub/blob/f237c89/packages/jira/src/models/config.ts#L6)
 
-___
+---
 
 ### parentIssue
 
@@ -45,9 +45,9 @@ ___
 
 #### Defined in
 
-[models/config.ts:3](https://github.com/agentender/code-rub/blob/944960b/packages/jira/src/models/config.ts#L3)
+[models/config.ts:3](https://github.com/agentender/code-rub/blob/f237c89/packages/jira/src/models/config.ts#L3)
 
-___
+---
 
 ### projectKey
 
@@ -55,9 +55,9 @@ ___
 
 #### Defined in
 
-[models/config.ts:2](https://github.com/agentender/code-rub/blob/944960b/packages/jira/src/models/config.ts#L2)
+[models/config.ts:2](https://github.com/agentender/code-rub/blob/f237c89/packages/jira/src/models/config.ts#L2)
 
-___
+---
 
 ### summaryTemplate
 
@@ -65,4 +65,4 @@ ___
 
 #### Defined in
 
-[models/config.ts:4](https://github.com/agentender/code-rub/blob/944960b/packages/jira/src/models/config.ts#L4)
+[models/config.ts:4](https://github.com/agentender/code-rub/blob/f237c89/packages/jira/src/models/config.ts#L4)

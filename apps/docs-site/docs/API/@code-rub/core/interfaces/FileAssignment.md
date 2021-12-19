@@ -1,7 +1,7 @@
 ---
-id: "FileAssignment"
-title: "Interface: FileAssignment"
-sidebar_label: "FileAssignment"
+id: 'FileAssignment'
+title: 'Interface: FileAssignment'
+sidebar_label: 'FileAssignment'
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -16,9 +16,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/file-assignment.interface.ts:6](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/file-assignment.interface.ts#L6)
+[models/file-assignment.interface.ts:6](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/file-assignment.interface.ts#L6)
 
-___
+---
 
 ### uid
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[models/file-assignment.interface.ts:5](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/file-assignment.interface.ts#L5)
+[models/file-assignment.interface.ts:5](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/file-assignment.interface.ts#L5)
