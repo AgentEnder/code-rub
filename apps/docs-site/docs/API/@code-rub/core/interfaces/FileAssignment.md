@@ -16,7 +16,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/file-assignment.interface.ts:6](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/file-assignment.interface.ts#L6)
+[models/file-assignment.interface.ts:6](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/file-assignment.interface.ts#L6)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[models/file-assignment.interface.ts:5](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/file-assignment.interface.ts#L5)
+[models/file-assignment.interface.ts:5](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/file-assignment.interface.ts#L5)

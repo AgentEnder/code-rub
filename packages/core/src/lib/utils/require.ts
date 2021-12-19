@@ -1,4 +1,5 @@
 import { register } from 'ts-node';
+
 import { repoRootPath } from './path';
 
 export function resolve(path: string) {

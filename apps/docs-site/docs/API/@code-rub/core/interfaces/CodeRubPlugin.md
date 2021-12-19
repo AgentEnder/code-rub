@@ -24,7 +24,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/plugin.interface.ts:71](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L71)
+[models/plugin.interface.ts:71](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L71)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:16](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L16)
+[models/plugin.interface.ts:16](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L16)
 
 ## Methods
 
@@ -61,7 +61,7 @@ Either a list of file assignments to use in further plugin execution, or nothing
 
 #### Defined in
 
-[models/plugin.interface.ts:40](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L40)
+[models/plugin.interface.ts:40](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L40)
 
 ___
 
@@ -86,7 +86,7 @@ A list of file paths that will be used in the next plugin or to generate assignm
 
 #### Defined in
 
-[models/plugin.interface.ts:32](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L32)
+[models/plugin.interface.ts:32](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L32)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:24](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L24)
+[models/plugin.interface.ts:24](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L24)
 
 ___
 
@@ -135,7 +135,7 @@ A Map between file path and a boolean representing if the file has been seen. Th
 
 #### Defined in
 
-[models/plugin.interface.ts:60](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L60)
+[models/plugin.interface.ts:60](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L60)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:50](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L50)
+[models/plugin.interface.ts:50](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L50)
 
 ___
 
@@ -180,4 +180,4 @@ ___
 
 #### Defined in
 
-[models/plugin.interface.ts:66](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L66)
+[models/plugin.interface.ts:66](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L66)

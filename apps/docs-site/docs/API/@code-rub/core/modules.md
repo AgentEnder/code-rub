@@ -27,7 +27,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/plugin.interface.ts:6](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/plugin.interface.ts#L6)
+[models/plugin.interface.ts:6](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/plugin.interface.ts#L6)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[models/config.interface.ts:6](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/config.interface.ts#L6)
+[models/config.interface.ts:6](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/config.interface.ts#L6)
 
 ## Functions
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[lib/utils/path.ts:6](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/lib/utils/path.ts#L6)
+[lib/utils/path.ts:6](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/lib/utils/path.ts#L6)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[lib/utils/object.ts:11](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/lib/utils/object.ts#L11)
+[lib/utils/object.ts:11](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/lib/utils/object.ts#L11)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[lib/utils/object.ts:31](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/lib/utils/object.ts#L31)
+[lib/utils/object.ts:31](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/lib/utils/object.ts#L31)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[lib/utils/require.ts:8](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/lib/utils/require.ts#L8)
+[lib/utils/require.ts:8](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/lib/utils/require.ts#L8)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[lib/utils/path.ts:14](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/lib/utils/path.ts#L14)
+[lib/utils/path.ts:14](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/lib/utils/path.ts#L14)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[lib/utils/require.ts:4](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/lib/utils/require.ts#L4)
+[lib/utils/require.ts:4](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/lib/utils/require.ts#L4)
 
 ___
 
@@ -189,4 +189,4 @@ ___
 
 #### Defined in
 
-[lib/utils/resolve-plugin.ts:6](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/lib/utils/resolve-plugin.ts#L6)
+[lib/utils/resolve-plugin.ts:6](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/lib/utils/resolve-plugin.ts#L6)

@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.interface.ts:30](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/config.interface.ts#L30)
+[models/config.interface.ts:30](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/config.interface.ts#L30)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[models/config.interface.ts:40](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/config.interface.ts#L40)
+[models/config.interface.ts:40](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/config.interface.ts#L40)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[models/config.interface.ts:20](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/config.interface.ts#L20)
+[models/config.interface.ts:20](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/config.interface.ts#L20)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[models/config.interface.ts:36](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/config.interface.ts#L36)
+[models/config.interface.ts:36](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/config.interface.ts#L36)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 #### Defined in
 
-[models/config.interface.ts:25](https://github.com/agentender/code-rub/blob/bfe7610/packages/core/src/models/config.interface.ts#L25)
+[models/config.interface.ts:25](https://github.com/agentender/code-rub/blob/944960b/packages/core/src/models/config.interface.ts#L25)

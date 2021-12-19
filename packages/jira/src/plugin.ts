@@ -1,10 +1,11 @@
 import JiraApi from 'jira-client';
 
 import { CodeRubPlugin } from '@code-rub/core';
+
+import { createIssue } from './create-issue';
+import { findJiraUser } from './find-jira-user';
 import { getCredentials } from './get-credentials';
 import { JiraPluginConfig } from './models/config';
-import { findJiraUser } from './find-jira-user';
-import { createIssue } from './create-issue';
 
 // Initialize
 let jira: JiraApi;

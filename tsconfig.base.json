@@ -17,9 +17,11 @@
     "baseUrl": ".",
     "paths": {
       "@code-rub/azure-devops": ["packages/azure-devops/src/index.ts"],
+      "@code-rub/azure-devops/models": ["packages/azure-devops/src/models/index.ts"],
       "@code-rub/core": ["packages/core/src/index.ts"],
       "@code-rub/github-issues": ["packages/github-issues/src/index.ts"],
-      "@code-rub/jira": ["packages/jira/src/index.ts"],
+      "@code-rub/jira/models": ["packages/jira/src/models/index.ts"],
+      "@code-rub/jira": ["packages/jira/src/plugin.ts"],
       "code-rub": ["packages/code-rub/src/index.ts"]
     }
   },

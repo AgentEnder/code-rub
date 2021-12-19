@@ -14,4 +14,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[plugin.ts:12](https://github.com/agentender/code-rub/blob/bfe7610/packages/jira/src/plugin.ts#L12)
+[plugin.ts:12](https://github.com/agentender/code-rub/blob/944960b/packages/jira/src/plugin.ts#L12)

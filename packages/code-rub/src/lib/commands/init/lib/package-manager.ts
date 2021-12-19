@@ -1,9 +1,10 @@
 /* Adapted from @nrwl/tao/src/shared/package-manager */
 
-import { repoRootPath } from '@code-rub/core';
 import { execSync } from 'child_process';
 import { existsSync } from 'fs';
 import { join } from 'path';
+
+import { repoRootPath } from '@code-rub/core';
 
 export type PackageManager = 'yarn' | 'pnpm' | 'npm';
 

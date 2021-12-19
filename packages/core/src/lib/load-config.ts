@@ -2,12 +2,7 @@ import { join } from 'path';
 
 import { ProvidedConfig, ResolvedConfig } from '../models/config.interface';
 import { CodeRubPlugin } from '../models/plugin.interface';
-import {
-  configFileName,
-  extendedRequire,
-  repoRootPath,
-  resolvePlugin,
-} from './utils';
+import { configFileName, extendedRequire, repoRootPath, resolvePlugin } from './utils';
 
 export async function loadConfig(
   path = configFileName()

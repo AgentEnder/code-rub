@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
+
 import { ResolvedConfig } from '../models';
 
 export function readFileMap(config: ResolvedConfig): Record<string, boolean> {

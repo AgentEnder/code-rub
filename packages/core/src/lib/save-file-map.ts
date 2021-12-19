@@ -1,5 +1,6 @@
-import { writeFileSync, ensureDirSync } from 'fs-extra';
+import { ensureDirSync, writeFileSync } from 'fs-extra';
 import { dirname, join } from 'path';
+
 import { ResolvedConfig } from '../models';
 
 export function saveFileMap(

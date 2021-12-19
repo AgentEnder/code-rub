@@ -1,6 +1,6 @@
 import { Ignore } from 'ignore';
-import { ProvidedConfig, ResolvedConfig } from './config.interface';
 
+import { ProvidedConfig, ResolvedConfig } from './config.interface';
 import { FileAssignment } from './file-assignment.interface';
 
 export type Awaitable<T> = Promise<T> | T;

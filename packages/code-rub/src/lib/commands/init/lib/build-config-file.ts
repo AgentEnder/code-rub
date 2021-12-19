@@ -1,13 +1,11 @@
-import {
-  CodeRubPlugin,
-  deepClone,
-  ProvidedConfig,
-  repoRootPath,
-  resolvePlugin,
-} from '@code-rub/core';
+import { prompt } from 'enquirer';
 import { existsSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { prompt } from 'enquirer';
+
+import {
+    CodeRubPlugin, deepClone, ProvidedConfig, repoRootPath, resolvePlugin
+} from '@code-rub/core';
+
 import type * as Prettier from 'prettier';
 
 type ConfigFileDescription = {

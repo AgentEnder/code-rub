@@ -3,10 +3,9 @@
   "description": "description",
   "authors": "author",
   "version": "1.0.0",
-  "main": "src/index",
   "dependencies": {},
   "exports": {
-    ".": "./src/plugin",
-    "./models": "./src/models"
+    ".": "./src/plugin.js",
+    "./models": "./src/models/index.js"
   }
 }

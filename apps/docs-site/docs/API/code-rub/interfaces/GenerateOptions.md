@@ -14,4 +14,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/commands/generate.ts:2](https://github.com/agentender/code-rub/blob/bfe7610/packages/code-rub/src/lib/commands/generate.ts#L2)
+[lib/commands/generate.ts:2](https://github.com/agentender/code-rub/blob/944960b/packages/code-rub/src/lib/commands/generate.ts#L2)

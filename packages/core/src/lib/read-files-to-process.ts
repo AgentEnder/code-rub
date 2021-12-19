@@ -1,7 +1,7 @@
-import ignore, { Ignore } from 'ignore';
-
 import { readdirSync, readFileSync } from 'fs';
+import ignore, { Ignore } from 'ignore';
 import { join } from 'path';
+
 import { ResolvedConfig } from '../models';
 import { Func } from '../models/misc';
 import { repoRootPath } from './utils';

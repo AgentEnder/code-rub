@@ -1,8 +1,10 @@
-import { repoRootPath } from '@code-rub/core';
 import { exec } from 'child_process';
-import { getPackageManagerCommand } from './package-manager';
 import { prompt } from 'enquirer';
 import ora from 'ora';
+
+import { repoRootPath } from '@code-rub/core';
+
+import { getPackageManagerCommand } from './package-manager';
 
 export async function installDevDependencies(packages: string[]) {
   console.log(

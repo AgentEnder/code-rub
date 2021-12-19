@@ -19,6 +19,8 @@ Initialize a blank code-rub configuration for your workspace. This is the starti
   - This is especially useful when multiple teams work in the same codebase.
 - `--skipInstall` allows bypassing the package.json checks + update. If using a preset not already installed, this **will** fail.
 
+There are curently two "first-party" presets setup, "jira" and "azure-devops".
+
 ### `npx code-rub [configFile]` (or `npx code-rub generate [configFile]`)
 
 Generates the next set of assignments for the configuration specified. If not provided, [configFile] defaults to 'code-rub.config.js'

@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+import * as dotenv from 'dotenv';
 import yargs from 'yargs';
+
 import { generate } from './commands/generate';
 import { init } from './commands/init/init';
 
-import * as dotenv from 'dotenv';
 dotenv.config();
 
 yargs(process.argv.slice(2))
