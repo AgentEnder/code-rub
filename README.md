@@ -5,6 +5,7 @@ This repository implements a base layer, CLI, and a few plugins to automate the 
 The core of code-rub is agnostic to ticketing system, project philosophy, and technology. On its own, it will do nothing except keep track of which files have been assigned for a rub, but it doesn't know how to actually create tickets and assign them. It doesn't even log them to the console by default.
 
 ## Quick Start
+
 Currently, a jira plugin is provided. If this suits your use case, run `npx code-rub init --preset jira`, and then fill in the placeholder values created in `code-rub.config.js`.
 
 If this doesn't suit your use case, run `npx code-rub init` to generate a blank configuration. There are examples of local plugins in this repo's tool folder, and the `code-rub.config.js` file here demonstrates how to point to them. They can be either typescript or javascript. There are future plans to add azure-devops and github issues based support, but they are not yet implemented. PRs adding them are welcome 😀
@@ -22,9 +23,10 @@ This is where the plugins come in. A code-rub plugin can change almost everythin
 - A method to read and write the file map: `readFileMap` and `saveFileMap` respectively.
   - Only one plugin may specify these methods.
 
-Plugins are specified by two pieces of configuration, the `plugins` array and the `pluginConfiguration` object. Plugin's are loaded based on the `plugins` array, and the capabilities they provide are configured through their entry in `pluginConfiguration`. 
+Plugins are specified by two pieces of configuration, the `plugins` array and the `pluginConfiguration` object. Plugin's are loaded based on the `plugins` array, and the capabilities they provide are configured through their entry in `pluginConfiguration`.
 
-Plugins are loaded, and executed based on their order in the `plugins` array. This is especially important for functions like `processFileQueue` which chains the results during execution. 
+Plugins are loaded, and executed based on their order in the `plugins` array. This is especially important for functions like `processFileQueue` which chains the results during execution.
+
 > As an example, imagine you have plugin1 which removes typescript files but plugin2 expects them to be present. If you use `plugins: [plugin1, plugin2]`, plugin2 would not see any of the typescript files. If you use `plugins: [plugin2, plugin1]`, plugin2 would see them since they are not removed yet.
 
 For an example plugin implementation, check the `jira` package in this repository.

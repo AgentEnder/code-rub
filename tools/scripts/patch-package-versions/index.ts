@@ -15,7 +15,7 @@ import {
 export function PatchPackageVersions(
   newVersion: string,
   updateGit = true,
-  prebuild = false,
+  prebuild = false
 ) {
   const workspace: WorkspaceJsonConfiguration = readWorkspaceJson();
   const rootPkg = readJson('package.json');
@@ -63,7 +63,7 @@ export function PatchPackageVersions(
         `git commit ${
           idx > 0 ? '--amend --no-edit' : '-m "chore(release): bump version"'
         }`,
-        { stdio: ['ignore', 'inherit', 'inherit'] },
+        { stdio: ['ignore', 'inherit', 'inherit'] }
       );
     }
   });
@@ -78,7 +78,7 @@ export function PatchPackageVersions(
 function patchDependenciesSection(
   section: 'dependencies' | 'devDependencies',
   packageJson: any,
-  version: string,
+  version: string
 ) {
   const localPackages = getWorkspacePackages();
   Object.keys(packageJson[section] || {}).forEach((pkg) => {

@@ -17,7 +17,7 @@ const sandboxDirectory = join(__dirname, '../../tmp/sandbox');
 export function setup() {
   copySync('.npmrc.local', '.npmrc');
   startCleanVerdaccioInstance();
-  publishDev(null, null, true)
+  publishDev(null, null, true);
 }
 
 if (require.main === module) {
@@ -27,12 +27,12 @@ if (require.main === module) {
   }
   execSync(
     `npx create-nx-workspace@latest ${basename(
-      sandboxDirectory,
+      sandboxDirectory
     )} --preset empty --no-nxCloud --packageManager yarn`,
     {
       cwd: dirname(sandboxDirectory),
       stdio: 'inherit',
-    },
+    }
   );
   copySync('.npmrc.local', join(sandboxDirectory, '.npmrc'));
   execSync(`yarn add --dev ${getWorkspacePackages().join(' ')}`, {

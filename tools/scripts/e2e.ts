@@ -23,7 +23,7 @@ async function runTest() {
 
   if (process.argv[3] === 'affected') {
     const affected = execSync(
-      `npx nx print-affected --base=origin/master --select=projects`,
+      `npx nx print-affected --base=origin/master --select=projects`
     )
       .toString()
       .split(',')
@@ -58,7 +58,7 @@ async function runTest() {
             NPM_CONFIG_REGISTRY: 'http://localhost:4872',
             YARN_REGISTRY: 'http://localhost:4872',
           },
-        },
+        }
       );
     } else {
       execSync(`yarn nx run-many --target=e2e --all`, {

@@ -27,7 +27,9 @@ export function publishAll(version: string, tag = 'latest', local = false) {
   projects.forEach((projectConfiguration, idx) => {
     const outputPath = projectConfiguration.targets?.build?.options?.outputPath;
     if (existsSync(`${outputPath}/package.json`)) {
-      console.log(execSync('npm config get registry', {env: environment}).toString())
+      console.log(
+        execSync('npm config get registry', { env: environment }).toString()
+      );
       execSync(`npm publish ${outputPath} --tag=${tag} --access=public`, {
         stdio: 'inherit',
         env: environment,

@@ -25,7 +25,7 @@ export function startCleanVerdaccioInstance() {
     {
       cwd: join(__dirname, '../../..'),
       stdio: 'inherit',
-    },
+    }
   );
 }
 

@@ -1,4 +1,4 @@
 export interface FileAssignment {
-    uid: string;
-    filePath: string;
+  uid: string;
+  filePath: string;
 }
