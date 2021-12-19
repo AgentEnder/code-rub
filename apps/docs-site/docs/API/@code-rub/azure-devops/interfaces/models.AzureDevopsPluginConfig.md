@@ -17,7 +17,7 @@ What should the description look like?
 
 #### Defined in
 
-[models/config.ts:20](https://github.com/agentender/code-rub/blob/3647cc9/packages/azure-devops/src/models/config.ts#L20)
+[models/config.ts:20](https://github.com/agentender/code-rub/blob/main/packages/azure-devops/src/models/config.ts#L20)
 
 ___
 
@@ -31,7 +31,7 @@ Whats your Azure Devops host url?
 
 #### Defined in
 
-[models/config.ts:32](https://github.com/agentender/code-rub/blob/3647cc9/packages/azure-devops/src/models/config.ts#L32)
+[models/config.ts:32](https://github.com/agentender/code-rub/blob/main/packages/azure-devops/src/models/config.ts#L32)
 
 ___
 
@@ -43,7 +43,7 @@ Should the ticket be a child? Which ticket is its parent?
 
 #### Defined in
 
-[models/config.ts:10](https://github.com/agentender/code-rub/blob/3647cc9/packages/azure-devops/src/models/config.ts#L10)
+[models/config.ts:10](https://github.com/agentender/code-rub/blob/main/packages/azure-devops/src/models/config.ts#L10)
 
 ___
 
@@ -55,7 +55,7 @@ Which project should the ticket be associated with?
 
 #### Defined in
 
-[models/config.ts:5](https://github.com/agentender/code-rub/blob/3647cc9/packages/azure-devops/src/models/config.ts#L5)
+[models/config.ts:5](https://github.com/agentender/code-rub/blob/main/packages/azure-devops/src/models/config.ts#L5)
 
 ___
 
@@ -67,7 +67,7 @@ What format should the title be in?
 
 #### Defined in
 
-[models/config.ts:15](https://github.com/agentender/code-rub/blob/3647cc9/packages/azure-devops/src/models/config.ts#L15)
+[models/config.ts:15](https://github.com/agentender/code-rub/blob/main/packages/azure-devops/src/models/config.ts#L15)
 
 ___
 
@@ -81,4 +81,4 @@ What type should the work item be created as?
 
 #### Defined in
 
-[models/config.ts:26](https://github.com/agentender/code-rub/blob/3647cc9/packages/azure-devops/src/models/config.ts#L26)
+[models/config.ts:26](https://github.com/agentender/code-rub/blob/main/packages/azure-devops/src/models/config.ts#L26)

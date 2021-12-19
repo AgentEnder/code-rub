@@ -6,7 +6,7 @@ The core of code-rub is agnostic to ticketing system, project philosophy, and te
 
 ## Quick Start
 
-Currently, a jira plugin is provided. If this suits your use case, run `npx code-rub init --preset jira`, and then fill in the placeholder values created in `code-rub.config.js`.
+Currently, a jira plugin and an azure-devops plugin are provided. If this suits your use case, run `npx code-rub init --preset {jira|azure-devops}`, and then fill in the placeholder values created in `code-rub.config.js`.
 
 If this doesn't suit your use case, run `npx code-rub init` to generate a blank configuration. There are examples of local plugins in this repo's tool folder, and the `code-rub.config.js` file here demonstrates how to point to them. They can be either typescript or javascript. There are future plans to add azure-devops and github issues based support, but they are not yet implemented. PRs adding them are welcome 😀
 

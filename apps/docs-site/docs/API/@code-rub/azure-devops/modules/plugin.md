@@ -14,4 +14,4 @@ custom_edit_url: null
 
 #### Defined in
 
-plugin.ts:12
+[plugin.ts:13](https://github.com/agentender/code-rub/blob/main/packages/azure-devops/src/plugin.ts#L13)

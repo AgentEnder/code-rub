@@ -16,7 +16,7 @@ What should the new configuration file be named?
 
 #### Defined in
 
-[lib/commands/init/init.ts:14](https://github.com/agentender/code-rub/blob/3647cc9/packages/code-rub/src/lib/commands/init/init.ts#L14)
+[lib/commands/init/init.ts:14](https://github.com/agentender/code-rub/blob/main/packages/code-rub/src/lib/commands/init/init.ts#L14)
 
 ___
 
@@ -28,7 +28,7 @@ Should a plugin be used to generate default settings?
 
 #### Defined in
 
-[lib/commands/init/init.ts:19](https://github.com/agentender/code-rub/blob/3647cc9/packages/code-rub/src/lib/commands/init/init.ts#L19)
+[lib/commands/init/init.ts:19](https://github.com/agentender/code-rub/blob/main/packages/code-rub/src/lib/commands/init/init.ts#L19)
 
 ___
 
@@ -40,4 +40,4 @@ Skips installing packages as part of the process. If a package is used for the p
 
 #### Defined in
 
-[lib/commands/init/init.ts:24](https://github.com/agentender/code-rub/blob/3647cc9/packages/code-rub/src/lib/commands/init/init.ts#L24)
+[lib/commands/init/init.ts:24](https://github.com/agentender/code-rub/blob/main/packages/code-rub/src/lib/commands/init/init.ts#L24)

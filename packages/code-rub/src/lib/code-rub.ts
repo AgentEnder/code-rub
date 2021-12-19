@@ -11,7 +11,7 @@ yargs(process.argv.slice(2))
   .scriptName('code-rub')
   .usage('$0 [cmd] [args]')
   .command(
-    'init [configFile] [--preset preset]',
+    'init [configFile] [--preset preset] [...preset options]',
     'Create a new code-rub config for this git repo',
     (y) => {
       y.positional('configFile', {

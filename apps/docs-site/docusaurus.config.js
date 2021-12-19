@@ -107,6 +107,7 @@ module.exports = {
         entryPoints: ['packages/core/src/index.ts'],
         tsconfig: 'packages/core/tsconfig.json',
         out: 'API/@code-rub/core',
+        gitRevision: 'main',
         sidebar: {
           categoryLabel: '@code-rub/core',
         },
@@ -124,6 +125,7 @@ module.exports = {
         ],
         tsconfig: 'packages/jira/tsconfig.json',
         out: 'API/@code-rub/jira',
+        gitRevision: 'main',
         sidebar: {
           categoryLabel: '@code-rub/jira',
         },
@@ -141,6 +143,7 @@ module.exports = {
         ],
         tsconfig: 'packages/azure-devops/tsconfig.json',
         out: 'API/@code-rub/azure-devops',
+        gitRevision: 'main',
         sidebar: {
           categoryLabel: '@code-rub/azure-devops',
         },
@@ -155,6 +158,7 @@ module.exports = {
         entryPoints: ['packages/code-rub/src/index.ts'],
         tsconfig: 'packages/code-rub/tsconfig.json',
         out: 'API/code-rub',
+        gitRevision: 'main',
         sidebar: {
           categoryLabel: 'code-rub',
         },
