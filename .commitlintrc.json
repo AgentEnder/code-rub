@@ -1,0 +1,26 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "scope-enum": [
+      1,
+      "always",
+      [
+        "core",
+        "cli",
+        "jira",
+        "azure-devops",
+        "docs-site",
+        "ci",
+        "repo",
+        "misc"
+      ]
+    ],
+    "type-enum": [
+      1,
+      "always",
+      ["test", "docs", "chore", "feat", "fix", "release"]
+    ],
+    "body-max-line-length": [1, "always", 400],
+    "footer-max-line-length": [1, "always", 400]
+  }
+}

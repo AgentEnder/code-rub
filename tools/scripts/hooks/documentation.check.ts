@@ -3,7 +3,7 @@ const { join } = require('path');
 
 const cwd = join(__dirname, '../../../');
 
-export function getChangedFiles(base = 'master', directory = '.'): string[] {
+export function getChangedFiles(base = 'main', directory = '.'): string[] {
   const ancestor = execSync(`git merge-base HEAD ${base} `).toString().trim();
   let cmd = `git diff --name-only ${ancestor} -- ${directory}`;
   console.log(`📁 Finding changed files with "${cmd}"`);

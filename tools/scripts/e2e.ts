@@ -23,7 +23,7 @@ async function runTest() {
 
   if (process.argv[3] === 'affected') {
     const affected = execSync(
-      `npx nx print-affected --base=origin/master --select=projects`
+      `npx nx print-affected --base=origin/main --select=projects`
     )
       .toString()
       .split(',')
