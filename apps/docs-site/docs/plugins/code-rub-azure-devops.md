@@ -1,27 +1,25 @@
 ---
-id: "index"
-title: "@code-rub/jira"
-slug: "/API/@code-rub/jira/"
-sidebar_label: "Readme"
-sidebar_position: 0
-custom_edit_url: null
+id: plugin-code-rub-azure-devops
+title: "@code-rub/azure-devops"
+sidebar_label: "azure-devops"
+slug: "/plugins/azure-devops"
 ---
 
-# @code-rub/jira
+# @code-rub/azure-devops
 
-This plugin adds support for creating issues on jira.
+This plugin adds support for creating work items on azure devops.
 
-To get started, run `npx code-rub init --preset jira` and update any placeholders inside `code-rub.config.js`.
+To get started, run `npx code-rub init --preset azure-devops` and fill in the answers.
 
 An example configuration is listed below for completeness:
 
 ```javascript
 const config = {
-  plugins: ['@code-rub/jira'],
+  plugins: ['@code-rub/azure-devops'],
   pluginConfiguration: {
-    '@code-rub/jira': {
-      host: 'craigory-test-instance.atlassian.net',
-      summaryTemplate: 'Code rub: {fileName}',
+    '@code-rub/azure-devops': {
+      host: 'https://dev.azure.com/AgentEnder',
+      titleTemplate: 'Code rub: {fileName}',
       descriptionTemplate: [
         `Code rubbing is just like glass rubbing, it makes cleaner, shinier and better to look at. \n`,
         `In order for that to happen, every engineer will need to pick up a random file from the solution they are working on, and make sure it follows the best practices and latest technologies, along with making sure it maintains it’s consistency across the entire solution. \n`,
@@ -36,12 +34,13 @@ const config = {
         ``,
         `Your file has already been picked, it is {fileName}`,
       ].join('\n'),
-      projectKey: 'TES',
-      issueType: 'Sub-task',
-      parentIssue: 'TES-12',
+      project: 'Test-Code-Rub-Project',
+      workItemType: 'Task',
+      parentTicket: '176',
     },
   },
 };
 
 module.exports = config;
 ```
+

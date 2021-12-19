@@ -1,10 +1,8 @@
 ---
-id: "index"
+id: plugin-code-rub-jira
 title: "@code-rub/jira"
-slug: "/API/@code-rub/jira/"
-sidebar_label: "Readme"
-sidebar_position: 0
-custom_edit_url: null
+sidebar_label: "jira"
+slug: "/plugins/jira"
 ---
 
 # @code-rub/jira
@@ -45,3 +43,4 @@ const config = {
 
 module.exports = config;
 ```
+

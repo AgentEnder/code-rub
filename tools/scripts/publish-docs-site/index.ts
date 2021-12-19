@@ -10,10 +10,10 @@ if (require.main === module) {
     cwd: path,
     stdio: 'inherit',
   });
-  execSync(
-    `git remote add origin https://github-actions:${process.env.GITHUB_TOKEN}@github.com/agentender/code-rub`,
-    { cwd: path, stdio: 'inherit' }
-  );
+  const origin = process.env.GITHUB_TOKEN
+    ? `https://github-actions:${process.env.GITHUB_TOKEN}@github.com/agentender/code-rub`
+    : `https://github.com/agentender/code-rub`;
+  execSync(`git remote add origin ${origin}`, { cwd: path, stdio: 'inherit' });
   execSync('git push -f --set-upstream origin gh-pages', {
     cwd: path,
     stdio: 'inherit',

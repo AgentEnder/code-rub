@@ -1,6 +1,8 @@
+const copyReadmePlugin = require('./copy-readme-plugin/copy-readme-plugin');
+
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'Code Rub',
+  tagline: 'Tech debt, paid down.',
   url: 'https://agentender.github.io',
   baseUrl: '/code-rub/',
   onBrokenLinks: 'throw',
@@ -17,8 +19,8 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
+          to: '/',
+          activeBasePath: '/',
           label: 'Docs',
           position: 'left',
         },
@@ -38,11 +40,11 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: 'docs/',
+              to: '/',
             },
             {
               label: 'API',
-              to: 'docs/API/code-rub',
+              to: '/API/code-rub',
             },
           ],
         },
@@ -86,6 +88,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
           // Please change this to your repo.
         },
         blog: {
@@ -98,6 +101,7 @@ module.exports = {
     ],
   ],
   plugins: [
+    copyReadmePlugin,
     [
       'docusaurus-plugin-typedoc',
 

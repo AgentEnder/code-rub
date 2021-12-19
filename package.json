@@ -58,6 +58,7 @@
     "docusaurus-plugin-typedoc": "^0.16.6",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.1.0",
+    "fast-glob": "^3.2.7",
     "jest": "27.2.3",
     "prettier": "^2.3.1",
     "ts-jest": "27.0.5",
