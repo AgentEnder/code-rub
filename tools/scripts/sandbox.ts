@@ -3,16 +3,16 @@ import {
   copySync,
   ensureDirSync,
   existsSync,
-  readJsonSync,
   removeSync,
+  writeFileSync,
 } from 'fs-extra';
+import { tmpdir } from 'os';
 import { basename, dirname, join, resolve } from 'path';
 import { getWorkspacePackages } from '../utils';
-import { appRootPath } from '@nrwl/tao/src/utils/app-root';
 import { startCleanVerdaccioInstance } from './local-registry/setup';
 import { publishDev } from './publish-dev';
 
-const sandboxDirectory = join(__dirname, '../../tmp/sandbox');
+const sandboxDirectory = join(tmpdir(), 'code-rub-sandbox');
 
 export function setup() {
   copySync('.npmrc.local', '.npmrc');
@@ -25,14 +25,14 @@ if (require.main === module) {
   if (existsSync(sandboxDirectory)) {
     removeSync(sandboxDirectory);
   }
-  execSync(
-    `npx create-nx-workspace@latest ${basename(
-      sandboxDirectory
-    )} --preset empty --no-nxCloud --packageManager yarn`,
-    {
-      cwd: dirname(sandboxDirectory),
-      stdio: 'inherit',
-    }
+  ensureDirSync(sandboxDirectory);
+  execSync(`git init`, {
+    cwd: sandboxDirectory,
+    stdio: 'inherit',
+  });
+  writeFileSync(
+    join(sandboxDirectory, 'package.json'),
+    JSON.stringify({ name: 'sandbox', dependencies: {} })
   );
   copySync('.npmrc.local', join(sandboxDirectory, '.npmrc'));
   execSync(`yarn add --dev ${getWorkspacePackages().join(' ')}`, {

@@ -5,12 +5,22 @@ const config = {
     // '@code-rub/azure-devops',
     '@code-rub/filter-files',
     './tools/test-plugins/log-files-length.plugin.js',
+    {
+      processAssignments: (assignments) => {
+        assignments.forEach((a) => console.log(`${a.uid} -> ${a.filePath}`));
+      },
+    },
   ],
   uids: ['craigorycoppola@gmail.com'],
+  tasksPerDeveloper: 4,
   pluginConfiguration: {
     '@code-rub/filter-files': {
       allowedFileExtensions: ['.ts', '.js'],
-      bannedFileNames: ['jest.config.js', 'code-rub.config.js', 'jest.preset.js'],
+      bannedFileNames: [
+        'jest.config.js',
+        'code-rub.config.js',
+        'jest.preset.js',
+      ],
     },
     '@code-rub/jira': {
       host: 'craigory-test-instance.atlassian.net',

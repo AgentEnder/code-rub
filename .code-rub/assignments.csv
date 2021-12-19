@@ -9,6 +9,7 @@ File, Seen
 .npmrc.local,false
 .prettierignore,false
 .prettierrc,false
+.releaserc.js,false
 .vscode/extensions.json,false
 README.md,false
 apps/docs-site/babel.config.js,false
@@ -77,7 +78,7 @@ packages/code-rub/jest.config.js,true
 packages/code-rub/package.json,false
 packages/code-rub/project.json,false
 packages/code-rub/src/index.ts,false
-packages/code-rub/src/lib/code-rub.spec.ts,false
+packages/code-rub/src/lib/code-rub.spec.ts,true
 packages/code-rub/src/lib/code-rub.ts,true
 packages/code-rub/src/lib/commands/generate.ts,true
 packages/code-rub/src/lib/commands/index.ts,false
@@ -98,7 +99,7 @@ packages/core/project.json,false
 packages/core/src/index.ts,false
 packages/core/src/lib/generate-assignments.ts,false
 packages/core/src/lib/load-config.ts,false
-packages/core/src/lib/main.ts,false
+packages/core/src/lib/main.ts,true
 packages/core/src/lib/read-file-map.ts,true
 packages/core/src/lib/read-files-to-process.ts,false
 packages/core/src/lib/save-file-map.ts,true
@@ -106,7 +107,7 @@ packages/core/src/lib/utils/index.ts,true
 packages/core/src/lib/utils/object.ts,false
 packages/core/src/lib/utils/path.ts,false
 packages/core/src/lib/utils/require.ts,true
-packages/core/src/lib/utils/resolve-plugin.ts,false
+packages/core/src/lib/utils/resolve-plugin.ts,true
 packages/core/src/lib/utils/typescript.ts,false
 packages/core/src/models/config.interface.ts,true
 packages/core/src/models/file-assignment.interface.ts,true
@@ -118,7 +119,7 @@ packages/core/tsconfig.lib.json,false
 packages/core/tsconfig.spec.json,false
 packages/filter-files/src/index.ts,false
 packages/filter-files/src/lib/filter-files.plugin.ts,false
-packages/filter-files/src/lib/filter-files.spec.ts,false
+packages/filter-files/src/lib/filter-files.spec.ts,true
 packages/filter-files/src/models/config.ts,false
 packages/filter-files/src/models/index.ts,false
 packages/github-issues/.babelrc,false
@@ -164,7 +165,7 @@ tools/scripts/patch-package-versions/index.ts,true
 tools/scripts/publish-all/index.ts,false
 tools/scripts/publish-dev/index.ts,false
 tools/scripts/publish-dev/schema.json,false
-tools/scripts/publish-docs-site/index.ts,false
+tools/scripts/publish-docs-site/index.ts,true
 tools/scripts/sandbox.ts,false
 tools/scripts/tsconfig.e2e.json,false
 tools/scripts/tsconfig.json,false
@@ -177,7 +178,7 @@ tools/tsconfig.tools.json,true
 tools/utils/fs.ts,true
 tools/utils/get-affected.ts,false
 tools/utils/index.ts,false
-tools/utils/nx.ts,false
+tools/utils/nx.ts,true
 tsconfig.base.json,false
 workspace.json,false
 yarn.lock,true

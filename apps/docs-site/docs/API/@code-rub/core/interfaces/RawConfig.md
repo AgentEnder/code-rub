@@ -54,7 +54,7 @@ ___
 
 ### tasksPerDeveloper
 
-• `Optional` **tasksPerDeveloper**: `number`
+• **tasksPerDeveloper**: `number`
 
 **`description`** How many tasks should be generated per developer?
 

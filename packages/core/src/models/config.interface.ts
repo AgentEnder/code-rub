@@ -33,7 +33,7 @@ export interface RawConfig {
    * @description How many tasks should be generated per developer?
    * @type number
    */
-  tasksPerDeveloper?: number;
+  tasksPerDeveloper: number;
 }
 
 export interface ResolvedConfig extends RawConfig {

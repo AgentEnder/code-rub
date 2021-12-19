@@ -18,7 +18,10 @@ export async function generateAssignments(
   unseenFiles = unseenFiles.sort(() => Math.random() - 0.5); // shuffle
   let assignments: FileAssignment[] = [];
 
-  const users = [...config.uids];
+  let users: string[] = [];
+  for (let i = 0; i < config.tasksPerDeveloper; i++) {
+    users = users.concat(config.uids);
+  }
 
   if (files.length === 0) {
     console.warn('No files were found to rub!');
