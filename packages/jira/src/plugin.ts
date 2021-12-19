@@ -2,7 +2,7 @@ import JiraApi from 'jira-client';
 
 import { CodeRubPlugin } from '@code-rub/core';
 import { getCredentials } from './get-credentials';
-import { JiraPluginConfig } from './config';
+import { JiraPluginConfig } from './models/config';
 import { findJiraUser } from './find-jira-user';
 import { createIssue } from './create-issue';
 

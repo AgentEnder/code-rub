@@ -1,5 +1,5 @@
 import JiraApi = require('jira-client');
-import { JiraPluginConfig } from './config';
+import { JiraPluginConfig } from './models/config';
 
 export async function createIssue(
   jira: JiraApi,

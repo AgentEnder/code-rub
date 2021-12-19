@@ -5,14 +5,20 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/jira/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/jira/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/jira"],
+      "outputs": [
+        "coverage/packages/jira"
+      ],
       "options": {
         "jestConfig": "packages/jira/jest.config.js",
         "passWithNoTests": true
@@ -25,7 +31,10 @@
           {
             "input": "packages/jira",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json"
+            ],
             "output": "/"
           },
           {
@@ -34,13 +43,15 @@
             "output": "/"
           }
         ],
-        "main": "packages/jira/src/index.ts",
+        "main": "packages/jira/src/plugin.ts",
         "tsConfig": "packages/jira/tsconfig.lib.json",
         "outputPath": "dist/packages/@code-rub/jira",
         "packageJson": "packages/jira/package.json",
         "generatePackageJson": true
       },
-      "outputs": ["{options.outputPath}"]
+      "outputs": [
+        "{options.outputPath}"
+      ]
     }
   },
   "tags": []

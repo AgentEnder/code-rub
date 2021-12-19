@@ -5,14 +5,20 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["packages/code-rub/**/*.ts"]
+        "lintFilePatterns": [
+          "packages/code-rub/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/code-rub"],
+      "outputs": [
+        "coverage/packages/code-rub"
+      ],
       "options": {
         "jestConfig": "packages/code-rub/jest.config.js",
         "passWithNoTests": true
@@ -25,7 +31,10 @@
           {
             "input": "packages/code-rub",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json"
+            ],
             "output": "/"
           },
           {
@@ -39,7 +48,9 @@
         "outputPath": "dist/packages/code-rub",
         "packageJson": "packages/code-rub/package.json"
       },
-      "outputs": ["dist/packages/code-rub"]
+      "outputs": [
+        "dist/packages/code-rub"
+      ]
     }
   },
   "tags": []

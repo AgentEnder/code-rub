@@ -1,19 +1,35 @@
-import { repoRootPath } from '@code-rub/core';
 import { readJson } from 'fs-extra';
 import ora from 'ora';
 import { join } from 'path';
-import { config } from 'yargs';
+
+import { repoRootPath } from '@code-rub/core';
+
 import { installDevDependencies } from './lib/add-packages';
 import { buildConfigFile } from './lib/build-config-file';
 
 export interface InitArgs {
+  /**
+   * What should the new configuration file be named?
+   */
   configFile: string;
+
+  /**
+   * Should a plugin be used to generate default settings?
+   */
   preset?: string;
+
+  /**
+   * Skips installing packages as part of the process. If a package is used for the preset and not installed, passing this *will* cause an error as the package will not be able to be resolved.
+   */
   skipInstall: boolean;
 }
 
 const FIRST_PARTY_PLUGINS = ['jira', 'azure-devops', 'filter'];
 
+/**
+ * Initialize a new configuration file for code rub, setting up packages if needed
+ * @param Arguments see {@link InitArgs}
+ */
 export async function init({ configFile, preset, skipInstall }: InitArgs) {
   if (preset && FIRST_PARTY_PLUGINS.includes(preset)) {
     preset = `@code-rub/${preset}`;
