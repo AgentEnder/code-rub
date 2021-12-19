@@ -1,6 +1,6 @@
 {
   "name": "@code-rub/filter-files",
-  "version": "0.0.1",
+  "version": "1.1.4",
   "exports": {
     ".": "./src/index.js",
     "./models": "./models/index.js"

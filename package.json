@@ -1,6 +1,6 @@
 {
   "name": "code-rub",
-  "version": "0.0.0",
+  "version": "1.1.4",
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target build --all && node ./dist/packages/core/src/lib/main",
