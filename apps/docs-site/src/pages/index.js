@@ -12,8 +12,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Running `npx code-rub --help` gets you most of the way there!
       </>
     ),
   },
@@ -28,12 +27,11 @@ const features = [
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'What is code rub?',
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Code rub is a technique to make sure files in your codebase don't become black boxes.
       </>
     ),
   },
@@ -60,7 +58,7 @@ function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="Docs site for code-rub cli tool <head />"
     >
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">

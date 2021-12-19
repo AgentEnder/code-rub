@@ -1,7 +1,7 @@
 ---
-id: 'RawConfig'
-title: 'Interface: RawConfig'
-sidebar_label: 'RawConfig'
+id: "RawConfig"
+title: "Interface: RawConfig"
+sidebar_label: "RawConfig"
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -24,9 +24,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.interface.ts:30](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/config.interface.ts#L30)
+[models/config.interface.ts:30](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/models/config.interface.ts#L30)
 
----
+___
 
 ### plugins
 
@@ -36,9 +36,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.interface.ts:15](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/config.interface.ts#L15)
+[models/config.interface.ts:15](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/models/config.interface.ts#L15)
 
----
+___
 
 ### storagePath
 
@@ -48,9 +48,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.interface.ts:20](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/config.interface.ts#L20)
+[models/config.interface.ts:20](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/models/config.interface.ts#L20)
 
----
+___
 
 ### tasksPerDeveloper
 
@@ -60,9 +60,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.interface.ts:36](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/config.interface.ts#L36)
+[models/config.interface.ts:36](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/models/config.interface.ts#L36)
 
----
+___
 
 ### uids
 
@@ -72,4 +72,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.interface.ts:25](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/config.interface.ts#L25)
+[models/config.interface.ts:25](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/models/config.interface.ts#L25)

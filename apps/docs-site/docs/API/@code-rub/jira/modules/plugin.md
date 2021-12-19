@@ -1,7 +1,7 @@
 ---
-id: 'plugin'
-title: 'Module: plugin'
-sidebar_label: 'plugin'
+id: "plugin"
+title: "Module: plugin"
+sidebar_label: "plugin"
 sidebar_position: 0
 custom_edit_url: null
 ---
@@ -14,4 +14,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[plugin.ts:13](https://github.com/agentender/code-rub/blob/f237c89/packages/jira/src/plugin.ts#L13)
+[plugin.ts:13](https://github.com/agentender/code-rub/blob/3647cc9/packages/jira/src/plugin.ts#L13)

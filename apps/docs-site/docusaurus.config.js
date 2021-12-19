@@ -6,8 +6,8 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'agentender', // Usually your GitHub org/user name.
+  projectName: 'cod-rub', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Code Rub',
@@ -126,6 +126,23 @@ module.exports = {
         out: 'API/@code-rub/jira',
         sidebar: {
           categoryLabel: '@code-rub/jira',
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-typedoc',
+
+      // Plugin / TypeDoc options
+      {
+        id: 'azure-devops-api',
+        entryPoints: [
+          'packages/azure-devops/src/models/index.ts',
+          'packages/azure-devops/src/plugin.ts',
+        ],
+        tsconfig: 'packages/azure-devops/tsconfig.json',
+        out: 'API/@code-rub/azure-devops',
+        sidebar: {
+          categoryLabel: '@code-rub/azure-devops',
         },
       },
     ],

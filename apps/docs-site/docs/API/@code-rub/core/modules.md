@@ -1,7 +1,7 @@
 ---
-id: 'modules'
-title: '@code-rub/core'
-sidebar_label: 'Exports'
+id: "modules"
+title: "@code-rub/core"
+sidebar_label: "Exports"
 sidebar_position: 0.5
 custom_edit_url: null
 ---
@@ -22,14 +22,14 @@ custom_edit_url: null
 #### Type parameters
 
 | Name |
-| :--- |
-| `T`  |
+| :------ |
+| `T` |
 
 #### Defined in
 
-[models/plugin.interface.ts:6](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/plugin.interface.ts#L6)
+[models/plugin.interface.ts:6](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/models/plugin.interface.ts#L6)
 
----
+___
 
 ### ProvidedConfig
 
@@ -39,7 +39,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[models/config.interface.ts:6](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/models/config.interface.ts#L6)
+[models/config.interface.ts:6](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/models/config.interface.ts#L6)
 
 ## Functions
 
@@ -53,9 +53,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/utils/path.ts:6](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/lib/utils/path.ts#L6)
+[lib/utils/path.ts:6](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/lib/utils/path.ts#L6)
 
----
+___
 
 ### deepClone
 
@@ -65,14 +65,14 @@ custom_edit_url: null
 
 #### Type parameters
 
-| Name | Type  |
-| :--- | :---- |
-| `T`  | `any` |
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
 
 #### Parameters
 
-| Name  | Type                    |
-| :---- | :---------------------- |
+| Name | Type |
+| :------ | :------ |
 | `obj` | `Object` \| `unknown`[] |
 
 #### Returns
@@ -81,9 +81,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/utils/object.ts:11](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/lib/utils/object.ts#L11)
+[lib/utils/object.ts:11](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/lib/utils/object.ts#L11)
 
----
+___
 
 ### deepMerge
 
@@ -92,14 +92,14 @@ custom_edit_url: null
 #### Type parameters
 
 | Name |
-| :--- |
+| :------ |
 | `T1` |
 | `T2` |
 
 #### Parameters
 
-| Name   | Type |
-| :----- | :--- |
+| Name | Type |
+| :------ | :------ |
 | `obj1` | `T1` |
 | `obj2` | `T2` |
 
@@ -109,9 +109,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/utils/object.ts:31](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/lib/utils/object.ts#L31)
+[lib/utils/object.ts:31](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/lib/utils/object.ts#L31)
 
----
+___
 
 ### extendedRequire
 
@@ -119,8 +119,8 @@ custom_edit_url: null
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `path` | `string` |
 
 #### Returns
@@ -129,9 +129,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/utils/require.ts:9](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/lib/utils/require.ts#L9)
+[lib/utils/require.ts:9](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/lib/utils/require.ts#L9)
 
----
+___
 
 ### repoRootPath
 
@@ -143,9 +143,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/utils/path.ts:14](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/lib/utils/path.ts#L14)
+[lib/utils/path.ts:14](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/lib/utils/path.ts#L14)
 
----
+___
 
 ### resolve
 
@@ -153,8 +153,8 @@ custom_edit_url: null
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `path` | `string` |
 
 #### Returns
@@ -163,9 +163,9 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/utils/require.ts:5](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/lib/utils/require.ts#L5)
+[lib/utils/require.ts:5](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/lib/utils/require.ts#L5)
 
----
+___
 
 ### resolvePlugin
 
@@ -173,15 +173,15 @@ custom_edit_url: null
 
 #### Type parameters
 
-| Name | Type      |
-| :--- | :-------- |
-| `T`  | `unknown` |
+| Name | Type |
+| :------ | :------ |
+| `T` | `unknown` |
 
 #### Parameters
 
-| Name | Type                                                          |
-| :--- | :------------------------------------------------------------ |
-| `p`  | `string` \| [`CodeRubPlugin`](interfaces/CodeRubPlugin)<`T`\> |
+| Name | Type |
+| :------ | :------ |
+| `p` | `string` \| [`CodeRubPlugin`](interfaces/CodeRubPlugin)<`T`\> |
 
 #### Returns
 
@@ -189,4 +189,4 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/utils/resolve-plugin.ts:6](https://github.com/agentender/code-rub/blob/f237c89/packages/core/src/lib/utils/resolve-plugin.ts#L6)
+[lib/utils/resolve-plugin.ts:6](https://github.com/agentender/code-rub/blob/3647cc9/packages/core/src/lib/utils/resolve-plugin.ts#L6)
