@@ -2,10 +2,16 @@ const config = {
   plugins: [
     './tools/test-plugins/log-files-length.plugin.js',
     // '@code-rub/jira',
-    '@code-rub/azure-devops',
+    // '@code-rub/azure-devops',
+    '@code-rub/filter-files',
+    './tools/test-plugins/log-files-length.plugin.js',
   ],
   uids: ['craigorycoppola@gmail.com'],
   pluginConfiguration: {
+    '@code-rub/filter-files': {
+      allowedFileExtensions: ['.ts', '.js'],
+      bannedFileNames: ['jest.config.js', 'code-rub.config.js', 'jest.preset.js'],
+    },
     '@code-rub/jira': {
       host: 'craigory-test-instance.atlassian.net',
       summaryTemplate: 'Code rub: {fileName}',

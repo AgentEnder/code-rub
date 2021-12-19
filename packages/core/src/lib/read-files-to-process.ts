@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'fs';
+import { readdir, readFileSync } from 'fs';
 import ignore, { Ignore } from 'ignore';
 import { join } from 'path';
 
@@ -6,10 +6,10 @@ import { ResolvedConfig } from '../models';
 import { Func } from '../models/misc';
 import { repoRootPath } from './utils';
 
-export function readFilesToProcess(configuration: ResolvedConfig): {
+export async function readFilesToProcess(configuration: ResolvedConfig): Promise<{
   allFiles: string[];
   filteredFiles: string[];
-} {
+}> {
   const ignore = configuration.plugins.reduce(
     (ig, plugin) =>
       plugin.processIgnore
@@ -22,7 +22,7 @@ export function readFilesToProcess(configuration: ResolvedConfig): {
   );
 
   const files: string[] = [];
-  visitNotIgnoredFiles(repoRootPath(), '.', (f) => files.push(f), ignore);
+  await visitNotIgnoredFiles(repoRootPath(), '.', (f) => files.push(f), ignore);
   return {
     allFiles: files,
     filteredFiles: configuration.plugins.reduce(
@@ -41,21 +41,32 @@ function visitNotIgnoredFiles(
   directory: string,
   visitor: Func<[string], void>,
   ignore?: Ignore
-): void {
+): Promise<void> {
   const absolutePath = join(basePath, directory);
-  const entries = readdirSync(absolutePath, { withFileTypes: true });
-  for (const entry of entries) {
-    const childPath = join(directory, entry.name);
-    if (ignore && ignore.test(childPath).ignored) {
-      continue;
-    }
+  return new Promise((res, rej) =>
+    readdir(absolutePath, { withFileTypes: true }, async (err, entries) => {
+      if (err) {
+        rej(err);
+      }
+      const promises: Promise<void>[] = [];
+      for (const entry of entries) {
+        const childPath = join(directory, entry.name);
+        if (ignore && ignore.test(childPath).ignored) {
+          continue;
+        }
 
-    if (entry.isDirectory()) {
-      visitNotIgnoredFiles(basePath, childPath, visitor, ignore);
-    } else {
-      visitor(childPath);
-    }
-  }
+        if (entry.isDirectory()) {
+          promises.push(
+            visitNotIgnoredFiles(basePath, childPath, visitor, ignore)
+          );
+        } else {
+          visitor(childPath);
+        }
+      }
+      await Promise.all(promises);
+      res();
+    })
+  );
 }
 
 function getDefaultIgnore(): Ignore {

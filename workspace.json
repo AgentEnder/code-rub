@@ -5,6 +5,7 @@
     "code-rub": "packages/code-rub",
     "core": "packages/core",
     "docs-site": "apps/docs-site",
+    "filter-files": "packages/filter-files",
     "github-issues": "packages/github-issues",
     "jira": "packages/jira"
   }

@@ -1,0 +1,34 @@
+{
+  "root": "packages/filter-files",
+  "sourceRoot": "packages/filter-files/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/filter-files/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/filter-files"],
+      "options": {
+        "jestConfig": "packages/filter-files/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/@code-rub/filter-files",
+        "tsConfig": "packages/filter-files/tsconfig.lib.json",
+        "packageJson": "packages/filter-files/package.json",
+        "main": "packages/filter-files/src/index.ts",
+        "assets": ["packages/filter-files/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

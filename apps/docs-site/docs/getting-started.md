@@ -16,7 +16,9 @@ The core of code-rub is agnostic to ticketing system, project philosophy, and te
 
 Currently, a jira plugin and an azure-devops plugin are provided. If this suits your use case, run `npx code-rub init --preset {jira|azure-devops}`, and then fill in the placeholder values created in `code-rub.config.js`.
 
-If this doesn't suit your use case, run `npx code-rub init` to generate a blank configuration. There are examples of local plugins in this repo's tool folder, and the `code-rub.config.js` file here demonstrates how to point to them. They can be either typescript or javascript. There are future plans to add azure-devops and github issues based support, but they are not yet implemented. PRs adding them are welcome 😀
+If this doesn't suit your use case, run `npx code-rub init` to generate a blank configuration. There are examples of local plugins in this repo's tool folder, and the `code-rub.config.js` file here demonstrates how to point to them. They can be either typescript or javascript. There are future plans to add github issues based support, but it is not yet implemented. PRs adding it are welcome 😀
+
+At a minimum, you will probably want to install the filter-files plugin too. This plugin helps limit the scope of the code-rub, and keeps things like tooling config from being selected. Check its [getting started doc](./API/@code-rub/filter-files/index.md) for more info.
 
 ## Plugins
 

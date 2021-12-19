@@ -7,7 +7,7 @@ import { saveFileMap } from './save-file-map';
 async function main() {
   const config = await loadConfig();
   const fileMap = readFileMap(config);
-  const { filteredFiles } = readFilesToProcess(config);
+  const { filteredFiles } = await readFilesToProcess(config);
 
   const filteredFileMap = filteredFiles.reduce((fm, file) => {
     fm[file] = fileMap[file] ?? false;

@@ -154,6 +154,24 @@ module.exports = {
 
       // Plugin / TypeDoc options
       {
+        id: 'filter-files-api',
+        entryPoints: [
+          'packages/filter-files/src/models/index.ts',
+          'packages/filter-files/src/lib/filter-files.plugin.ts',
+        ],
+        tsconfig: 'packages/filter-files/tsconfig.json',
+        out: 'API/@code-rub/filter-files',
+        gitRevision: 'main',
+        sidebar: {
+          categoryLabel: '@code-rub/filter-files',
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-typedoc',
+
+      // Plugin / TypeDoc options
+      {
         id: 'cli-api',
         entryPoints: ['packages/code-rub/src/index.ts'],
         tsconfig: 'packages/code-rub/tsconfig.json',
