@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-models/status-update.interface.ts:3
+[models/status-update.interface.ts:3](https://github.com/agentender/code-rub/blob/main/packages/core/src/models/status-update.interface.ts#L3)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-models/status-update.interface.ts:2
+[models/status-update.interface.ts:2](https://github.com/agentender/code-rub/blob/main/packages/core/src/models/status-update.interface.ts#L2)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-models/status-update.interface.ts:4
+[models/status-update.interface.ts:4](https://github.com/agentender/code-rub/blob/main/packages/core/src/models/status-update.interface.ts#L4)

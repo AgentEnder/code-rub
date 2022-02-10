@@ -19,6 +19,20 @@ custom_edit_url: null
 
 ___
 
+### extraFields
+
+• **extraFields**: `Object`
+
+#### Index signature
+
+▪ [key: `string`]: `string`
+
+#### Defined in
+
+[models/config.ts:8](https://github.com/agentender/code-rub/blob/main/packages/jira/src/models/config.ts#L8)
+
+___
+
 ### host
 
 • **host**: `string`
