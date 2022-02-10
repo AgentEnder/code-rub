@@ -1,12 +1,16 @@
 import { readdir, readFileSync } from 'fs';
 import ignore, { Ignore } from 'ignore';
 import { join } from 'path';
+import { Observer } from 'rxjs';
 
-import { ResolvedConfig } from '../models';
+import { ResolvedConfig, StatusUpdate } from '../models';
 import { Func } from '../models/misc';
 import { repoRootPath } from './utils';
 
-export async function readFilesToProcess(configuration: ResolvedConfig): Promise<{
+export async function readFilesToProcess(
+  configuration: ResolvedConfig,
+  updateObserver?: Observer<StatusUpdate>
+): Promise<{
   allFiles: string[];
   filteredFiles: string[];
 }> {
@@ -25,14 +29,18 @@ export async function readFilesToProcess(configuration: ResolvedConfig): Promise
   await visitNotIgnoredFiles(repoRootPath(), '.', (f) => files.push(f), ignore);
   return {
     allFiles: files,
-    filteredFiles: configuration.plugins.reduce(
-      (f, plugin) =>
+    filteredFiles: configuration.plugins.reduce((f, plugin) => {
+      updateObserver?.next({
+        message: `Processing file map (${plugin.name})`,
+        complete: false,
+      });
+      const processed =
         plugin.processFileQueue?.(
           f,
           configuration.pluginConfiguration?.[plugin.name]
-        ) || f,
-      files
-    ),
+        ) || f;
+      return processed;
+    }, files),
   };
 }
 

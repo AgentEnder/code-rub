@@ -17,13 +17,5 @@ export async function loadConfig(
     return plugins;
   }, [] as CodeRubPlugin<unknown>[]);
 
-  const resolved = config as ResolvedConfig;
-
-  for (const plugin of resolved.plugins) {
-    if (plugin.setup) {
-      await plugin.setup(config.pluginConfiguration?.[plugin.name]);
-    }
-  }
-
   return config as ResolvedConfig;
 }

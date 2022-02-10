@@ -12,6 +12,7 @@ custom_edit_url: null
 - [FileAssignment](interfaces/FileAssignment)
 - [RawConfig](interfaces/RawConfig)
 - [ResolvedConfig](interfaces/ResolvedConfig)
+- [StatusUpdate](interfaces/StatusUpdate)
 
 ## Type aliases
 
@@ -190,3 +191,23 @@ ___
 #### Defined in
 
 [lib/utils/resolve-plugin.ts:6](https://github.com/agentender/code-rub/blob/main/packages/core/src/lib/utils/resolve-plugin.ts#L6)
+
+___
+
+### worker
+
+▸ **worker**(`updateObserver?`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `updateObserver?` | `Observer`<[`StatusUpdate`](interfaces/StatusUpdate)\> |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[lib/main.ts:12](https://github.com/agentender/code-rub/blob/main/packages/core/src/lib/main.ts#L12)

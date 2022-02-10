@@ -31,7 +31,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[lib/commands/generate.ts:9](https://github.com/agentender/code-rub/blob/main/packages/code-rub/src/lib/commands/generate.ts#L9)
+[lib/commands/generate.ts:13](https://github.com/agentender/code-rub/blob/main/packages/code-rub/src/lib/commands/generate.ts#L13)
 
 ___
 
