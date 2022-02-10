@@ -2,7 +2,7 @@
   "name": "@code-rub/jira",
   "description": "description",
   "authors": "author",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "dependencies": {},
   "exports": {
     ".": "./src/plugin.js",

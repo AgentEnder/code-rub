@@ -2,7 +2,7 @@
   "name": "@code-rub/core",
   "description": "description",
   "authors": "author",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "src/index",
   "dependencies": {}
 }

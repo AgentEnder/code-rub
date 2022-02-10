@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/AgentEnder/code-rub/compare/v1.2.0...v1.2.1) (2022-02-10)
+
+
+### Bug Fixes
+
+* **jira:** should lookup users by id ([#6](https://github.com/AgentEnder/code-rub/issues/6)) ([2508ef9](https://github.com/AgentEnder/code-rub/commit/2508ef9490062b3fc3ee17d063cc041c0b283caf))
+
 # [1.2.0](https://github.com/AgentEnder/code-rub/compare/v1.1.5...v1.2.0) (2022-02-10)
 
 
