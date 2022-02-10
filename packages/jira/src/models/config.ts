@@ -6,6 +6,6 @@ export interface JiraPluginConfig {
   issueType: string;
   host: string;
   extraFields: {
-    [key: string]: string
+    [key: string]: unknown
   }
 }
