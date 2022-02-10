@@ -4,7 +4,7 @@ import { JiraPluginConfig } from './models/config';
 export async function createIssue(
   jira: JiraApi,
   config: JiraPluginConfig,
-  jiraUserId: string,
+  jiraUserId: JiraApi.UserObject,
   filePath: string
 ) {
   const summary = config.summaryTemplate.replace(/\{fileName\}/g, filePath);
@@ -24,6 +24,7 @@ export async function createIssue(
       assignee: {
         id: jiraUserId,
       },
+      ...config.extraFields
     },
   };
   if (config.parentIssue) {

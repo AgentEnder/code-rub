@@ -5,4 +5,7 @@ export interface JiraPluginConfig {
   descriptionTemplate: string;
   issueType: string;
   host: string;
+  extraFields: {
+    [key: string]: string
+  }
 }
