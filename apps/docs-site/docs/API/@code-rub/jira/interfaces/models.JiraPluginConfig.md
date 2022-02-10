@@ -25,7 +25,7 @@ ___
 
 #### Index signature
 
-▪ [key: `string`]: `string`
+▪ [key: `string`]: `unknown`
 
 #### Defined in
 
