@@ -2,7 +2,7 @@
   "name": "code-rub",
   "description": "description",
   "authors": "author",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "main": "src/index.js",
   "bin": {
     "code-rub": "./src/lib/code-rub.js"
