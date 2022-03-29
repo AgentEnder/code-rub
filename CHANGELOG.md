@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/AgentEnder/code-rub/compare/v1.2.1...v1.3.0) (2022-03-29)
+
+
+### Bug Fixes
+
+* **jira:** add additional error handling for failed findUser calls ([f30ecc4](https://github.com/AgentEnder/code-rub/commit/f30ecc47ed35aaa4c149b957e2fe09b496050773))
+* **jira:** cache user id's to minimize chance of unexpected failures ([dd42bab](https://github.com/AgentEnder/code-rub/commit/dd42bab469b31214e40eef2e6c0b33cad6ac7a04))
+
+
+### Features
+
+* **core:** export utility for reading config ([5b0fbc3](https://github.com/AgentEnder/code-rub/commit/5b0fbc39c941925416d8c4544b170834644bf16a))
+
 ## [1.2.1](https://github.com/AgentEnder/code-rub/compare/v1.2.0...v1.2.1) (2022-02-10)
 
 
