@@ -13,7 +13,9 @@ async function searchForJiraUser(
   const searchResults = await jira.searchUsers({
     username: uid,
   } as any);
-
+  if (!Array.isArray(searchResults)) {
+    throw new Error('Failed to find Jira user for ' + uid);
+  }
   if (searchResults.length === 0) {
     throw new Error('No Jira user found matching ' + uid);
   }

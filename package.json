@@ -34,6 +34,9 @@
     "yargs-parser": "^21.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/types": "^13.2.0",
     "@nrwl/cli": "13.3.6",
     "@nrwl/eslint-plugin-nx": "13.3.6",
     "@nrwl/jest": "13.3.6",
