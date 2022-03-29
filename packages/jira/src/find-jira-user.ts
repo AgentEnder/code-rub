@@ -1,8 +1,17 @@
 import type JiraApi from 'jira-client';
 
+const uidCache: Record<string, JiraApi.UserObject> = {};
 export async function findJiraUser(jira: JiraApi, uid: string) {
+  uidCache[uid] ??= searchForJiraUser(jira, uid);
+  return uidCache[uid];
+}
+
+async function searchForJiraUser(
+  jira: JiraApi,
+  uid: string
+): Promise<JiraApi.UserObject> {
   const searchResults = await jira.searchUsers({
-    username: `${uid}`,
+    username: uid,
   } as any);
 
   if (searchResults.length === 0) {
