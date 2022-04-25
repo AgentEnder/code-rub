@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'code-rub',
-  preset: '../../jest.preset.js',
+  displayName: 'core',
+
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -10,5 +10,6 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/packages/code-rub',
+  coverageDirectory: '../../coverage/packages/core',
+  preset: '../../jest.preset.ts',
 };

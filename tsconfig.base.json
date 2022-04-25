@@ -25,6 +25,7 @@
       "@code-rub/github-issues": ["packages/github-issues/src/index.ts"],
       "@code-rub/jira": ["packages/jira/src/plugin.ts"],
       "@code-rub/jira/models": ["packages/jira/src/models/index.ts"],
+      "@code-rub/nx-plugin": ["packages/nx-plugin/src/index.ts"],
       "code-rub": ["packages/code-rub/src/index.ts"]
     }
   },

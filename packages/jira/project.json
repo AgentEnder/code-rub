@@ -5,36 +5,27 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/jira/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/jira/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/jira"
-      ],
+      "outputs": ["coverage/packages/jira"],
       "options": {
-        "jestConfig": "packages/jira/jest.config.js",
+        "jestConfig": "packages/jira/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "options": {
         "assets": [
           {
             "input": "packages/jira",
             "glob": "**/*.json",
-            "ignore": [
-              "**/tsconfig*.json",
-              "project.json"
-            ],
+            "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
           },
           {
@@ -49,15 +40,7 @@
         "packageJson": "packages/jira/package.json",
         "generatePackageJson": true
       },
-      "outputs": [
-        "{options.outputPath}"
-      ]
-    },
-    "deploy": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "echo 'not npm-publish'"
-      }
+      "outputs": ["{options.outputPath}"]
     }
   },
   "tags": []

@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'core',
-  preset: '../../jest.preset.js',
+  displayName: 'azure-devops',
+
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -10,5 +10,6 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/packages/core',
+  coverageDirectory: '../../coverage/packages/azure-devops',
+  preset: '../../jest.preset.ts',
 };
