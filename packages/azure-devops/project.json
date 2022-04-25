@@ -5,22 +5,16 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/azure-devops/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/azure-devops/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/azure-devops"
-      ],
+      "outputs": ["coverage/packages/azure-devops"],
       "options": {
-        "jestConfig": "packages/azure-devops/jest.config.js",
+        "jestConfig": "packages/azure-devops/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -31,10 +25,7 @@
           {
             "input": "packages/azure-devops",
             "glob": "**/*.json",
-            "ignore": [
-              "**/tsconfig*.json",
-              "project.json"
-            ],
+            "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
           },
           {
@@ -47,15 +38,7 @@
         "tsConfig": "packages/azure-devops/tsconfig.lib.json",
         "outputPath": "dist/packages/@code-rub/azure-devops"
       },
-      "outputs": [
-        "{options.outputPath}"
-      ]
-    },
-    "deploy": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "echo 'not npm-publish'"
-      }
+      "outputs": ["{options.outputPath}"]
     }
   },
   "tags": []

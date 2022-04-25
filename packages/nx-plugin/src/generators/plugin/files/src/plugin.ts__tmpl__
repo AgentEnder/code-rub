@@ -1,0 +1,15 @@
+import { CodeRubPlugin } from '@code-rub/core';
+import {<%=className%>PluginConfig} from './models/<%=fileName%>-plugin-config.model'
+
+const plugin: CodeRubPlugin<<%=className%>PluginConfig> = {
+  name: '<%=importPath%>>',
+  setup: async (config) => {},
+  processAssignments: async (assignments, config) => {
+    for (const a of assignments) {
+      // Implement assignment handling
+    }
+  },
+  initialConfiguration: () => ({}),
+};
+
+export = plugin;

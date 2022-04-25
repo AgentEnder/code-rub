@@ -4,16 +4,13 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "options": {
         "assets": [
           {
             "input": "packages/core",
             "glob": "**/*.json",
-            "ignore": [
-              "**/tsconfig*.json",
-              "project.json"
-            ],
+            "ignore": ["**/tsconfig*.json", "project.json"],
             "output": "/"
           },
           {
@@ -27,35 +24,21 @@
         "outputPath": "dist/packages/@code-rub/core",
         "packageJson": "packages/core/package.json"
       },
-      "outputs": [
-        "{options.outputPath}"
-      ]
+      "outputs": ["{options.outputPath}"]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/core/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/core/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/core"
-      ],
+      "outputs": ["coverage/packages/core"],
       "options": {
-        "jestConfig": "packages/core/jest.config.js",
+        "jestConfig": "packages/core/jest.config.ts",
         "passWithNoTests": true
-      }
-    },
-    "deploy": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "echo 'not npm-publish'"
       }
     }
   },

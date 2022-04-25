@@ -7,6 +7,8 @@
     "docs-site": "apps/docs-site",
     "filter-files": "packages/filter-files",
     "github-issues": "packages/github-issues",
-    "jira": "packages/jira"
+    "jira": "packages/jira",
+    "nx-plugin": "packages/nx-plugin",
+    "nx-plugin-e2e": "nx-plugin-e2e"
   }
 }

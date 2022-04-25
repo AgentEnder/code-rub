@@ -5,44 +5,28 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/github-issues/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/github-issues/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/github-issues"
-      ],
+      "outputs": ["coverage/packages/github-issues"],
       "options": {
-        "jestConfig": "packages/github-issues/jest.config.js",
+        "jestConfig": "packages/github-issues/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/@code-rub/github-issues",
         "tsConfig": "packages/github-issues/tsconfig.lib.json",
         "packageJson": "packages/github-issues/package.json",
         "main": "packages/github-issues/src/index.ts",
-        "assets": [
-          "packages/github-issues/*.md"
-        ]
-      }
-    },
-    "deploy": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "echo 'not npm-publish'"
+        "assets": ["packages/github-issues/*.md"]
       }
     }
   },

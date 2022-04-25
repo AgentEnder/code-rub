@@ -21,7 +21,12 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
         "accessToken": "YjJmMGQ5NjItYTYxOS00YWQ0LWE2NzYtYTA1YzBhZGViMWNmfHJlYWQtd3JpdGU="
       }
     }
@@ -33,5 +38,6 @@
         "projects": "dependencies"
       }
     ]
-  }
+  },
+  "plugins": ["@code-rub/nx-plugin"]
 }
