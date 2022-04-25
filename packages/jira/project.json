@@ -52,6 +52,12 @@
       "outputs": [
         "{options.outputPath}"
       ]
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo 'not npm-publish'"
+      }
     }
   },
   "tags": []

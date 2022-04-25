@@ -38,6 +38,12 @@
           "packages/github-issues/*.md"
         ]
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo 'not npm-publish'"
+      }
     }
   },
   "tags": []
