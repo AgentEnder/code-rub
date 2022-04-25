@@ -19,7 +19,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/@code-rub/filter-files",
@@ -27,6 +27,12 @@
         "packageJson": "packages/filter-files/package.json",
         "main": "packages/filter-files/src/index.ts",
         "assets": ["packages/filter-files/*.md"]
+      }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo 'not npm-publish'"
       }
     }
   },

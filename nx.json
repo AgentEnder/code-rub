@@ -32,6 +32,12 @@
         "target": "build",
         "projects": "dependencies"
       }
+    ],
+    "deploy": [
+      {
+        "target": "build",
+        "projects": "self"
+      }
     ]
   }
 }
