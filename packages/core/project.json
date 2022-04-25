@@ -51,6 +51,12 @@
         "jestConfig": "packages/core/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo 'not npm-publish'"
+      }
     }
   },
   "tags": []
