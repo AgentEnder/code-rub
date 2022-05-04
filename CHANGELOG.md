@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/AgentEnder/code-rub/compare/v1.3.0...v1.3.1) (2022-05-04)
+
+
+### Bug Fixes
+
+* **core:** config should be able to be async ([4dd1739](https://github.com/AgentEnder/code-rub/commit/4dd17391f9b9a1a607884734c051a39396f9d59b))
+
 # [1.3.0](https://github.com/AgentEnder/code-rub/compare/v1.2.1...v1.3.0) (2022-03-29)
 
 
