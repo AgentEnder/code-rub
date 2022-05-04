@@ -28,5 +28,11 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["core", "jira", "code-rub", "azure-devops", "filter-files"]
+  "implicitDependencies": [
+    "core",
+    "jira",
+    "code-rub",
+    "azure-devops",
+    "filter-files"
+  ]
 }
