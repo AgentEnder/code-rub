@@ -3,9 +3,8 @@ export const projectFilePatterns = ['project.json']
 export function registerProjectTargets(f) {
     return ({
         deploy: {
-            executor: '@nrwl/workspace:run-commands',
+            executor: '@code-rub/nx-plugin:build',
             options: {
-                command: 'echo "not npm-publish"'
             }
         }
     })
