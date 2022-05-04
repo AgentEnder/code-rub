@@ -1,7 +1,7 @@
 import { join } from 'path';
 
 import { ProvidedConfig, ResolvedConfig } from '../models/config.interface';
-import { CodeRubPlugin } from '../models/plugin.interface';
+import { Awaitable, CodeRubPlugin } from '../models/plugin.interface';
 import {
   configFileName,
   extendedRequire,
@@ -17,7 +17,9 @@ export async function loadConfig(
 }
 
 async function _loadConfig(path: string): Promise<ResolvedConfig> {
-  const config: ProvidedConfig = extendedRequire(join(repoRootPath(), path));
+  const config = await extendedRequire<Awaitable<ProvidedConfig>>(
+    join(repoRootPath(), path)
+  );
   config.storagePath ??= '.code-rub';
   config.plugins ??= [];
   config.uids ??= [];
