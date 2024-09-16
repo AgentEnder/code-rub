@@ -1,43 +1,40 @@
 #!/usr/bin/env node
 import * as dotenv from 'dotenv';
-import yargs from 'yargs';
+import { cli } from 'cli-forge';
 
 import { generate } from './commands/generate';
 import { init } from './commands/init/init';
 
 dotenv.config();
 
-yargs(process.argv.slice(2))
-  .scriptName('code-rub')
-  .usage('$0 [cmd] [args]')
-  .command(
-    'init [configFile] [--preset preset] [...preset options]',
-    'Create a new code-rub config for this git repo',
-    (y) => {
-      y.positional('configFile', {
-        default: 'code-rub.config.js',
-      });
-      y.option({
-        preset: {
-          string: true,
+cli('code-rub')
+  .command('init', {
+    description: 'Create a new code-rub config for this git repo',
+    usage: 'code-rub init [configFile] [--preset preset] [...preset options]',
+    builder: (y) =>
+      y
+        .positional('configFile', {
+          type: 'string',
+          default: 'code-rub.config.js',
+        })
+        .option('preset', {
+          type: 'string',
           required: false,
-          default: null,
-        },
-        skipInstall: {
-          boolean: true,
+        })
+        .option('skipInstall', {
+          type: 'boolean',
           default: false,
-        },
-      });
-    },
-    init
-  )
-  .command(
-    ['generate [configFile]', '$0 [configFile]'],
-    'Generate the next set of assignments',
-    (y) =>
+        }),
+    handler: (args) => init(args),
+  })
+  .command('generate', {
+    description: 'Generate the next set of assignments',
+    usage: 'code-rub generate [configFile]',
+    builder: (y) =>
       y.positional('configFile', {
+        type: 'string',
         default: 'code-rub.config.js',
       }),
-    generate
-  )
-  .parse();
+    handler: (args) => generate(args),
+  })
+  .forge();
